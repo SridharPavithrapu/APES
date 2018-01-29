@@ -1,0 +1,1 @@
+cmd_/home/sridhar/kernel-module-example/hello-world.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/sridhar/kernel-module-example/hello-world.ko /home/sridhar/kernel-module-example/hello-world.o /home/sridhar/kernel-module-example/hello-world.mod.o ;  true
