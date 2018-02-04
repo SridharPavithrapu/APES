@@ -93,6 +93,7 @@ int main(void)
 		int single_character;
 		/* Reading a single character from file */ 
 		single_character = getc(new_fp);
+		printf("Character read is :%d",single_character);
 		
 		char string_buffer[BUFFER];
 		/* Reading a string from the file */
