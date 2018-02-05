@@ -1,17 +1,45 @@
+/*************************************************************************************
+*
+* FileName        :    main.c
+* Description     :    This file contains necessary function for double linked list
+					   system calls.
+* File Author Name:    Sridhar Pavithrapu 
+* Tools used      :    gcc, gedit
+* References      :    None
+*
+***************************************************************************************/
+
+/* Headers Section */
 #include <stdio.h>
 #include <stdlibh>
 #include "doublyLinkedList.h"
 
 
+/* Macros section */
+#define MAIN_NUM_ZERO (0)
+#define MAIN_LIST_NUM_ONE (1)
+#define MAIN_LIST_NUM_TWO (2)
+#define MAIN_NUM_THREE (3)
+#define MAIN_NUM_FOUR (4)
+#define MAIN_NUM_FIVE (5)
+#define MAIN_NUM_SIX (6)
+#define MAIN_NUM_SEVEN (7)
+#define MAIN_NUM_EIGHT (8)
+#define MAIN_NUM_NINE (9)
+#define MAIN_NUM_TEN (10)
+#define MAIN_NUM_ELEVEN (11)
+#define MAIN_NUM_TWELVE (12)
+
+/* Main function definition */
 int main(void ){
 	
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
-	int status = 0;
+	int status = MAIN_NUM_ZERO;
 	int node_data,node_position;
 	
-	while(1){
+	while(MAIN_NUM_ONE){
 		printf("\nMenu for doubly linked list:\n");
 		printf("Enter 1 for inserting node at beginning\n");
 		printf("Enter 2 for inserting node at end\n");
@@ -27,18 +55,18 @@ int main(void ){
 		printf("\nEnter the input:\n");
 		scanf("%d",&status);
 		
-		if(status>0  && status<12){
-			if(status == 1){
+		if(status>MAIN_NUM_ZERO  && status<MAIN_NUM_TWELVE){
+			if(status == MAIN_NUM_ONE){
 					printf("Please enter the node data you want to store:\n");
 					scanf("%d",&node_data);
 					insert_at_beginning(head,node_data);
 			}
-			else if(status == 2){
+			else if(status == MAIN_NUM_TWO){
 					printf("Please enter the node data you want to store:\n");
 					scanf("%d",&node_data);
 					insert_at_end(head,node_data);
 			}
-			else if(status == 3){
+			else if(status == MAIN_NUM_THREE){
 					printf("Please enter the node data you want to store:\n");
 					scanf("%d",&node_data);
 					printf("Please enter the position of node you want to store:\n");

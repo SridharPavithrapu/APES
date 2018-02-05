@@ -17,6 +17,7 @@
 
 /* Macros section */
 #define BUFFER (100)
+#define TRACE_NUM_ZERO (0)
 
 /**
 ​ * ​ ​ @brief​ : Main function for valid system calls and performing necessary actions
@@ -42,10 +43,10 @@ int main(void)
 	
 	/* Modifying the permissions of the file to be read/write */
     
-    if (chmod (file_path,S_IRWXU) < 0)
+    if (chmod (file_path,S_IRWXU) < TRACE_NUM_ZERO)
     {
         fprintf(stderr, "Error in chmod \n");
-        exit(1);
+        exit(TRACE_NUM_ZERO);
     }
 	
 	
@@ -59,7 +60,7 @@ int main(void)
 	{
 		/* Error opening the file */
 		fprintf(stderr, "Error opening the file \n");
-        exit(1);
+        exit(TRACE_NUM_ZERO);
 	}
 	
 	putc('\n', new_fp);
@@ -103,7 +104,7 @@ int main(void)
 	{
 		/* Error opening the file */
 		fprintf(stderr, "Error opening the file \n");
-        exit(1);
+        exit(TRACE_NUM_ZERO);
 	}
 	
 	/* Freeing the allocated memory */
@@ -112,5 +113,5 @@ int main(void)
 	/* Closing the file */
 	fclose(new_fp);	
 
-	exit(0);
+	exit(TRACE_NUM_ZERO);
 }

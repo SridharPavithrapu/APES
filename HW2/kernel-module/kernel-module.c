@@ -24,11 +24,13 @@
 #include <linux/stat.h>
 #include <linux/timer.h>
 
+/* Module description */
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Sridhar Pavithrapu");
 MODULE_DESCRIPTION("A simple kernel module with demonstartion to kernel timer");
 MODULE_VERSION("1.0");
 
+/* Global variables section */
 static unsigned int time_interval = 500;
 static char *name_string = "default";
 static unsigned int timer_count=0;
@@ -51,18 +53,22 @@ MODULE_PARM_DESC(name_string, "A character string");
 /*** Function Definitions ***/
 
 /**
-​* ​ ​ @brief​ : Timer handler for printing the timer count and name
+​ * ​ ​ @brief​ : Timer handler for printing the timer count and name.
+ *
+ * ​ ​ @param​ ​: data for any arguments passed 
+​ *
+​ * ​ ​ @return​ : None
 ​**/
 
-void timer_handler(unsigned long data)
-{
+void timer_handler(unsigned long data){
+	
 	/* Incrementing the count value */
 	timer_count++;
 
 	printk(KERN_INFO "In timer_handler with name: %s, and count :%d\n", name_string,timer_count);
     	
 	/* Restarting the timer */
-    	mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
+    mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
  
 }
 
@@ -74,16 +80,16 @@ void timer_handler(unsigned long data)
 ​* ​ ​ @return​ successful intialization of kernel module
 ​**/
 
-static int __init kernel_module_init(void)
-{
+static int __init kernel_module_init(void){
+	
 	int status;
 	printk(KERN_INFO "In kernel module initalization\n=============\n");
 	printk(KERN_INFO "Given timer count: %d\n", time_interval);
 	printk(KERN_INFO "Given name_string: %s\n", name_string);
 
 	/*Starting the timer.*/
-    	setup_timer(&g_timer, timer_handler, 0);
-    	status = mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
+    setup_timer(&g_timer, timer_handler, 0);
+    status = mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
 	if(status){
 		printk(KERN_INFO "Error in mod_timer");
 	}
@@ -91,11 +97,15 @@ static int __init kernel_module_init(void)
 }
 
 /**
-​* ​ ​ @brief​ : Exiting the kernel module
+​ * ​ ​ @brief​ : Exiting the kernel module.
+ *
+ * ​ ​ @param​ ​: None
+​ *
+​ * ​ ​ @return​ : None
 ​**/
 
-static void __exit kernel_module_exit(void)
-{
+static void __exit kernel_module_exit(void){
+	
 	int status;
 	printk(KERN_INFO "In kernel module exit\n");
 	status = del_timer(&g_timer);

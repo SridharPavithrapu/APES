@@ -9,11 +9,14 @@
 
 
 /** 
-* @file doublyLinkedList.h 
-* @brief  Includes function declartions for inserting nodes at different position, 
+* @file doublyLinkedList.h
+* 
+* @brief  Includes function declarations for inserting nodes at different position, 
 *		removing nodes at different position, destroying all nodes, 
 *		finding peak value and size for the double linked lists. 
+*
 * @author Sridhar Pavithrapu 
+*
 * @date January 26 2018 
 **/
 
@@ -26,9 +29,11 @@
 #include <stdlib.h> 
 #include <stdint.h> 
 #include <stddef.h>
+#include <string.h>
 
+/* Macros section */
 #define GET_LIST_CONTAINER(addr, type, member) ({ \
-	const typeof( ((type *)0)->member ) *__mptr = (addr); \
+	const __typeof__( ((type *)0)->member ) *__mptr = (addr); \
     (type *)( (char *)__mptr - offsetof(type,member) );})
 
 
@@ -51,7 +56,7 @@ typedef struct node{
 /*
 ​* ​ ​ @brief   ​ : Structure for the information of nodes of doubly linked list
 ​*  ​ @contents : data -> data value stored in the node
-*               node -> node pointing to structure NODE   
+*               list -> node pointing to structure NODE   
 ​*/
 
 typedef struct info{
@@ -61,94 +66,96 @@ typedef struct info{
 }INFO;
 
 
-
-/*** Enumerations ***/
-
-/*
-​* ​ ​ @brief​ : Enum for Error Codes
-​*
-​* ​ ​ Returns a code stating the status of different operations:
-*   SUCCESS              : Successful opeartion
-​*/
-
-typedef enum{
-	SUCCESS,
-	MALLOC_ERROR,
-	INVALID_POS,
-	DELETE_ERROR
-	
-}Error_code;
-
 /*** Function Declarations ***/
 
 /**
 ​* ​ ​ @brief​ : Destroys all nodes from the linked list
 ​*
-​* ​ ​ Returns a status code of destroy operation
+​* ​ ​ Returns a node pointing to head
 ​* ​ ​
 ​*
-​* ​ ​ @param​ ​ head_ptr  ​ A double pointer to the head of the Linked List
+​* ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
 ​*
-​* ​ ​ @return​ ​Error_code enum 
+​* ​ ​ @return​ ​Node pointing to head
 ​*/
-Error_code destroy(NODE* head_ptr);
+NODE* destroy(NODE* head_ptr);
 
 
 /**
 ​* ​ ​ @brief​ : Adds a node at the beginning of the linked list
 ​*
-​* ​ ​ Returns a status code of insert_at_beginning operation
+​* ​ ​ Returns a node pointing to head
 ​* ​ ​
 ​*
-​* ​ ​ @param​ ​ head_ptr  ​ A double pointer to the head of the Linked List
+​* ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
 ​* ​ ​ @param​ ​ info ​      Data to be added to the Linked List
-​* ​ ​ @return​ ​Error_code enum
+​* ​ ​ @return​ ​Node pointing to head
 ​*/
-Error_code insert_at_beginning(NODE* head_ptr, uint32_t info);
+NODE* insert_at_beginning(NODE* head_ptr, uint32_t info);
 
 /**
 ​* ​ ​ @brief​ : Adds a node at the end of the linked list
 ​*
-​* ​ ​ Returns a status code of insert_at_end operation
+​* ​ ​ Returns a node pointing to head
 ​* ​ ​
 ​*
-​* ​ ​ @param​ ​ head_ptr  ​ A double pointer to the head of the Linked List
-​* ​ ​ @param​ ​ info ​        Data to be added to the Linked List
+​* ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
+​* ​ ​ @param​ ​ info ​      Data to be added to the Linked List
 ​*
-​* ​ ​ @return​ ​Error_code enum
+​* ​ ​ @return​ ​Node pointing to head
 ​*/
-Error_code insert_at_end(NODE* head_ptr,uint32_t info);
+NODE* insert_at_end(NODE* head_ptr,uint32_t info);
 
 /**
 ​* ​ ​ @brief​ : Adds a node at the required index of the linked list
 ​*
-​* ​ ​ Returns a status code of insert_at_position operation
+​* ​ ​ Returns a node pointing to head
 ​* ​ ​
 ​*
-​* ​ ​ @param​ ​ head_ptr  ​ A double pointer to the head of the Linked List
-​* ​ ​ @param​ ​ info ​        Data to be added to the Linked List
-​* ​ ​ @param​ ​ index ​       index where data is to be added
+​* ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
+​* ​ ​ @param​ ​ info ​      Data to be added to the Linked List
+​* ​ ​ @param​ ​ index ​     index where data is to be added
 ​*
-​* ​ ​ @return​ ​Error_code enum
+​* ​ ​ @return​ ​Node pointing to head
 ​*/
-Error_code insert_at_position(NODE* head_ptr,uint32_t info,uint32_t index);
+NODE* insert_at_position(NODE* head_ptr,uint32_t info,uint32_t index);
 
 /**
-​ * ​ ​ @brief​ : Remove a node from Linked List
+​ * ​ ​ @brief​ : Remove a node at beginning of Linked List
 ​ *
-​ * ​ ​ Returns a status code of remove node operation
+​ * ​ ​ Returns a node pointing to head
 ​ * ​ ​
 ​ *
-​ * ​ ​ @param​ ​ hdnode_ptr  ​ A double pointer to the head of the Linked List
-​ * ​ ​ @param​ ​ index ​       index from where data is to be removed
+​ * ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
 ​ *
-​ * ​ ​ @return​ ​ (enum)Err_code
+​ * ​ ​ @return​ ​ Node pointing to head
 ​ */
-Error_code delete_at_beginning(NODE* head_ptr);
+NODE* delete_at_beginning(NODE* head_ptr);
 
-Error_code delete_at_end(NODE* head_ptr);
+/**
+​ * ​ ​ @brief​ : Remove a node at end of Linked List
+​ *
+​ * ​ ​ Returns a node pointing to head
+​ * ​ ​
+​ *
+​ * ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
+​ *
+​ * ​ ​ @return​ ​ Node pointing to head
+​ */
+NODE* delete_at_end(NODE* head_ptr);
 
-Error_code delete_at_position(NODE* head_ptr, uint32_t index);
+/**
+​* ​ ​ @brief​ : Remove a node at the required index of the linked list
+​*
+​* ​ ​ Returns a node pointing to head
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
+​* ​ ​ @param​ ​ index ​     index where node is to be removed
+​*
+​* ​ ​ @return​ ​Node pointing to head
+​*/
+NODE* delete_at_position(NODE* head_ptr, uint32_t index);
 
 /**
 ​ * ​ ​ @brief​ : Returns current size of the LinkedList
@@ -158,6 +165,31 @@ Error_code delete_at_position(NODE* head_ptr, uint32_t index);
 ​ * ​ ​ @return​ ​ uint32_t
 ​ */
 uint32_t size(NODE* head_ptr);
+
+/**
+​* ​ ​ @brief​ : Printing data of nodes of the linked list
+​*
+​* ​ ​ Returns a success with integer 0
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
+​*
+​* ​ ​ @return​ uint32_t
+​*/
+uint32_t print_list(NODE* head_ptr);
+
+/**
+​* ​ ​ @brief​ : Get data of the given index node
+​*
+​* ​ ​ Returns a data of the node pointed
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ head_ptr  ​ A pointer to the head of the Linked List
+*   @param  index      index of the node
+​*
+​* ​ ​ @return​ ​uint32_t
+​*/
+uint32_t get_data(NODE* head_ptr,uint32_t index);
 
 
 #endif 

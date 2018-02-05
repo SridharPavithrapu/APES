@@ -22,6 +22,8 @@
 /* Macro's section */
 #define BUFFER (100)
 #define SORT_BUFFER (256)
+#define CRON_NUM_ZERO (0)
+#define SYS_CALL_NUMBER (334)
 
 /**
 ​ * ​ ​ @brief​ : Main function for valid system calls and printing the output to a file. 
@@ -57,19 +59,19 @@ int main(void)
 	fprintf(new_fp, "%s \n","The unsorted array is:");
 	int sort_buffer[SORT_BUFFER]={};
 	int sort_output[SORT_BUFFER]={};	
-	for(int count=0;count<SORT_BUFFER; count++){
+	for(int count=CRON_NUM_ZERO; count<SORT_BUFFER; count++){
 
 		sort_buffer[count]= (rand()%SORT_BUFFER);
 		fprintf(new_fp, "%d ", sort_buffer[count]);
 	}
 	/* Calling sortArray system_call, with system call number 334 */	
-	long int return_status = syscall(334,sort_buffer,SORT_BUFFER,sort_output); 
+	long int return_status = syscall(SYS_CALL_NUMBER,sort_buffer,SORT_BUFFER,sort_output); 
          
-	if(return_status == 0) {
+	if(return_status == CRON_NUM_ZERO) {
          
 		fprintf(new_fp, "\n %s \n","The sorted array output is:");
 
-		for(int index=0;index<SORT_BUFFER;index++)
+		for(int index=CRON_NUM_ZERO; index<SORT_BUFFER; index++)
 		{
 			fprintf(new_fp, "%d ", sort_output[index]);
 		}
@@ -81,5 +83,5 @@ int main(void)
 	fprintf(new_fp, "%s", "\n *****END*****\n");
 	/* Closing the file */	
 	fclose(new_fp);
-     	return 0;
+    return CRON_NUM_ZERO;
 }
