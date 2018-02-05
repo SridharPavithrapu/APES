@@ -1,3 +1,15 @@
+/*************************************************************************************
+*
+* FileName        :    test_dll.c
+* Description     :    This file contains necessary  test functions for double linked list.
+					   
+* File Author Name:    Sridhar Pavithrapu 
+* Tools used      :    gcc, gedit, cmocka
+* References      :    None
+*
+***************************************************************************************/
+
+/* Headers Section */
 #include <math.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -6,11 +18,27 @@
 #include <cmocka.h>
 #include "doublyLinkedList.h"
 
+/* Macros section */
+#define TEST_NUM_ZERO (0)
+#define TEST_NUM_ONE (1)
+#define TEST_NUM_TWO (2)
+#define TEST_NUM_TEN (10)
+#define TEST_NUM_ELEVEN (11)
+#define TEST_NUM_TWELVE (12)
 
+/**
+​* ​ ​ @brief​ : test function for DLL insert at beginning
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_insert_at_beginning_valid(void **state){
 
-	int data = 10;
-	int position = 1;
+	/* Test case for inserting node at beginning of DLL */
+	int data = TEST_NUM_TEN;
+	int position = TEST_NUM_ONE;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -25,11 +53,20 @@ void test_insert_at_beginning_valid(void **state){
 	free(head);
 }
 
+/**
+​* ​ ​ @brief​ : test function for DLL insert at end
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_insert_at_end_valid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
-	int position = 2;
+	/* Test case for inserting node at end of DLL */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
+	int position = TEST_NUM_TWO;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -46,12 +83,21 @@ void test_insert_at_end_valid(void **state){
 	free(head);
 }
 
+/**
+​* ​ ​ @brief​ : test function for DLL insert at given position valid case
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_insert_at_position_valid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
-	int data3 = 12;
-	int position = 2;
+	/* Test case for inserting node at given index valid scenario */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
+	int data3 = TEST_NUM_TWELVE;
+	int position = TEST_NUM_TWO;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -69,12 +115,21 @@ void test_insert_at_position_valid(void **state){
 	free(head);
 }
 
+/**
+​* ​ ​ @brief​ : test function for DLL insert at given position invalid case
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_insert_at_position_invalid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
-	int data3 = 12;
-	int position = 0;
+	/* Test case for inserting node at given index invalid scenario */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
+	int data3 = TEST_NUM_TWELVE;
+	int position = TEST_NUM_ZERO;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -86,13 +141,22 @@ void test_insert_at_position_invalid(void **state){
 	free(head);
 }
 
+/**
+​* ​ ​ @brief​ : test function to get the size of DLL 
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_size_valid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
-	int data3 = 12;
-	int position = 2;
-	int count = 0;
+	/* Test case for size of DLL */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
+	int data3 = TEST_NUM_TWELVE;
+	int position = TEST_NUM_TWO;
+	int count = TEST_NUM_ZERO;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -113,11 +177,20 @@ void test_size_valid(void **state){
 	free(head);
 }
 
+/**
+​* ​ ​ @brief​ : test function for DLL delete node at beginning
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_delete_at_beginning_valid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
-	int position = 1;
+	/* Test case for deleting node at beginning of DLL */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
+	int position = TEST_NUM_ONE;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -135,11 +208,20 @@ void test_delete_at_beginning_valid(void **state){
 	free(head);
 }
 
+/**
+​* ​ ​ @brief​ : test function for DLL delete node at end
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_delete_at_end_valid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
-	int position = 1;
+	/* Test case for deleting node at end of DLL */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
+	int position = TEST_NUM_ONE;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -157,11 +239,20 @@ void test_delete_at_end_valid(void **state){
 	free(head);
 }
 
+/**
+​* ​ ​ @brief​ : test function for DLL delete node at given position valid case
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_delete_at_position_valid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
-	int position = 1;
+	/* Test case for deleting node at given index valid scenario */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
+	int position = TEST_NUM_ONE;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -179,11 +270,20 @@ void test_delete_at_position_valid(void **state){
 	free(head);
 }
 
+/**
+​* ​ ​ @brief​ : test function for DLL delete node at given position invalid case
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_delete_at_position_invalid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
-	int position = 0;
+	/* Test case for deleting node at given index invalid scenario */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
+	int position = TEST_NUM_ZERO;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -195,11 +295,19 @@ void test_delete_at_position_invalid(void **state){
 	free(head);
 }
 
-
+/**
+​* ​ ​ @brief​ : test function for DLL destroy all the nodes
+​* ​ ​
+​*
+​* ​ ​ @param​ ​ state  ​ A pointer to the state
+​*
+​* ​ ​ @return​ ​None
+​*/
 void test_destroy_valid(void **state){
 
-	int data1 = 10;
-	int data2 = 11;
+	/* Test case for destroying DLL */
+	int data1 = TEST_NUM_TEN;
+	int data2 = TEST_NUM_ELEVEN;
 	NODE *head = (NODE *)malloc(sizeof(NODE));
 	head->prev = NULL;
 	head->next = NULL;
@@ -211,10 +319,15 @@ void test_destroy_valid(void **state){
 }
 
 
-
-
+/**
+​* ​ ​ @brief​ : main function for all DLL test cases
+​* ​ ​
+​*
+​* ​ ​ @return​ ​Pass and Fail test cases
+​*/
 int main(int argc, char **argv){
 
+	/* Calling all DLL test case functions */
 	const struct CMUnitTest tests[] = {
 		cmocka_unit_test(test_insert_at_beginning_valid),
 		cmocka_unit_test(test_insert_at_end_valid),

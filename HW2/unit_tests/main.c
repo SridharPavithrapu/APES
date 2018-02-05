@@ -2,7 +2,7 @@
 *
 * FileName        :    main.c
 * Description     :    This file contains necessary function for double linked list
-					   system calls.
+					   
 * File Author Name:    Sridhar Pavithrapu 
 * Tools used      :    gcc, gedit
 * References      :    None
@@ -73,28 +73,28 @@ int main(void ){
 					scanf("%d",&node_position);
 					insert_at_position(head,node_data,node_position);
 			}
-			else if(status == 4){
+			else if(status == MAIN_NUM_FOUR){
 					delete_at_beginning(head);
 			}
-			else if(status == 5){
+			else if(status == MAIN_NUM_FIVE){
 					delete_at_end(head);
 			}
-			else if(status == 6){
+			else if(status == MAIN_NUM_SIX){
 					printf("Please enter the position of node you want to delete:\n");
 					scanf("%d",&node_position);
 					delete_at_position(head,node_position);
 			}
-			else if(status == 7){
+			else if(status == MAIN_NUM_SEVEN){
 					int size_linked_list = size(head);
 					printf("Size of the linked list is:%d \n", size_linked_list);
 			}
-			else if(status == 8){
+			else if(status == MAIN_NUM_EIGHT){
 					print_list(head);
 			}
-			else if(status == 9){
+			else if(status == MAIN_NUM_NINE){
 				destroy(head);
 			}
-			else if(status == 10){
+			else if(status == MAIN_NUM_TEN){
 				printf("Please enter the position of node you want to store:\n");
 				scanf("%d",&node_position);
 				uint32_t return_value = get_data(head, node_position);

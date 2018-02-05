@@ -2,7 +2,7 @@
 *
 * FileName        :    doublyLinkedList.c
 * Description     :    This file contains necessary function for double linked list
-					   system calls.
+					   
 * File Author Name:    Sridhar Pavithrapu 
 * Tools used      :    gcc, gedit
 * References      :    None
