@@ -492,17 +492,24 @@ NODE* destroy(NODE* head_ptr){
 	printf("In destroy function \n");
 	NODE *next_element;
 	INFO *node_info;
-	next_element = head_ptr->next;
-	while(next_element->next){
+	if(head_ptr->next == NULL){
 		
-			node_info = GET_LIST_CONTAINER(next_element,struct info,list);
-			free(node_info);
-			next_element = next_element->next;
+		printf("Not deleting any item, since head pointer is NULL");
+		return NULL;
 	}
-	node_info = GET_LIST_CONTAINER(next_element,struct info,list);
-	free(node_info);
-	head_ptr->next = NULL;
-	return head_ptr;
+	else{
+		next_element = head_ptr->next;
+		while(next_element->next){
+			
+				node_info = GET_LIST_CONTAINER(next_element,struct info,list);
+				free(node_info);
+				next_element = next_element->next;
+		}
+		node_info = GET_LIST_CONTAINER(next_element,struct info,list);
+		free(node_info);
+		head_ptr->next = NULL;
+		return head_ptr;
+	}
 	
 }
 
