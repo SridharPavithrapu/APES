@@ -1,58 +1,24 @@
-# cmocka example for ECEN 5013
+# Steps to run unit-test for doubly linked list
 
-* [cmocka](https://cmocka.org/)
-
-* cmocka [API](https://api.cmocka.org/index.html)
-
-cmocka is included in this repository as a git subtree. See
-3rd-party/README.md for details.
-
-## Requirements
-
-* cmake - available through most package managers.
-
-## Build
-
-* building cmocka:
-
-    ```SHELL
-    make cmocka
-    ```
-
-    This will go into the 3rd-party libraries directory and call cmake
-    correctly to build cmocka.
-
-* building and running tests:
+* For building and running tests, enter the below command inside the unit_tests folder:
 
     ```SHELL
     make test
     ```
     
-* building main executable
-
-    ```SHELL
-    make all
-    ```
-    
-* cleaing up local build artifacts:
+* For cleaning up local build artifacts, enter the below command inside the unit_tests folder:
 
     ```SHELL
     make clean
     ```
-    
-* removing all generated files, including 3rd-party builds
 
-    ```SHELL
-    make clobber
-    ```
-    
 ## Source
 
 Included source files are:
 
-* quadratic.{h|c} - simple demo library solving quadratic equations.
+* doublyLinkedList.{h|c} - Library for Doubly Linked List.
 
-* test_quadratic.c - unit tests for quadratic solver.
+* test_dll.c - unit tests for doubly linked lists.
 
-* main.c - simple demo driver using library.
+* main.c - Library for running the outtput of DLL.
 
