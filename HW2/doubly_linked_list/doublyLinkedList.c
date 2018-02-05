@@ -49,7 +49,7 @@ NODE* insert_at_beginning(NODE* head_ptr, uint32_t info){
 	if(new_node == NULL){
 		
 			printf("Error in malloc\n");
-			return head_ptr;
+			return NULL;
 	}
 	
 	/* Check for empty linked list */
@@ -96,7 +96,7 @@ NODE* insert_at_end(NODE* head_ptr, uint32_t info){
 	if(new_node == NULL){
 		
 			printf("Error in malloc\n");
-			return head_ptr;
+			return NULL;
 	}
 	
 	/* Check for empty linked list */
@@ -211,7 +211,7 @@ NODE* insert_at_position(NODE* head_ptr,uint32_t info,uint32_t index){
 	if(index == LINKED_LIST_NUM_ZERO){
 		
 		printf("Not inserting any item, since index is zero");
-		return head_ptr; 
+		return NULL; 
 	}
 	
 	/* Creating a new node */
@@ -320,7 +320,7 @@ NODE* delete_at_beginning(NODE* head_ptr){
 	if(head_ptr->next == NULL){
 		
 		printf("Not deleting any item, since head pointer is NULL");
-		return head_ptr;
+		return NULL;
 	}
 	else{
 		
@@ -328,7 +328,7 @@ NODE* delete_at_beginning(NODE* head_ptr){
 		if(list_size == LINKED_LIST_NUM_ZERO){
 			
 			printf("Not deleting any item, since list size is zero");
-			return head_ptr;
+			return NULL;
 		}
 		else if(list_size == LINKED_LIST_NUM_ONE){
 	
@@ -372,14 +372,14 @@ NODE* delete_at_end(NODE* head_ptr){
 	if(head_ptr->next == NULL){
 		
 		printf("Not deleting any item, since head pointer is NULL");
-		return head_ptr;
+		return NULL;
 	}
 	else{
 		
 		int list_size = size(head_ptr);
 		if(list_size == LINKED_LIST_NUM_ZERO){
 			printf("Not deleting any item, since list size is zero");
-			return head_ptr;
+			return NULL;
 		}
 		else if(list_size == LINKED_LIST_NUM_ONE){
 	
@@ -427,19 +427,19 @@ NODE* delete_at_position(NODE* head_ptr, uint32_t index){
 	if(index == LINKED_LIST_NUM_ZERO){
 		
 		printf("Not deleting any item, since index is zero");
-		return head_ptr; 
+		return NULL; 
 	}
 	if(head_ptr->next == NULL){
 		
 		printf("Not deleting any item, since head pointer is NULL");
-		return head_ptr;
+		return NULL;
 	}
 	else{
 		
 		int list_size = size(head_ptr);
 		if(list_size == LINKED_LIST_NUM_ZERO || index > list_size){
 			printf("Not deleting any item, since list size is zero");
-			return head_ptr;
+			return NULL;
 		}
 		else if(list_size == LINKED_LIST_NUM_ONE){
 	
