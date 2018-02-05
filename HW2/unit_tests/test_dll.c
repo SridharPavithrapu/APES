@@ -339,8 +339,6 @@ int main(int argc, char **argv){
 		cmocka_unit_test(test_delete_at_position_valid),
 		cmocka_unit_test(test_delete_at_position_invalid),
 		cmocka_unit_test(test_destroy_valid),
-
-
 	};
 
 	return cmocka_run_group_tests(tests, NULL, NULL);
