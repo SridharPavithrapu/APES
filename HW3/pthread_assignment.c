@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 #include <sys/time.h>
+#include <signal.h>
 #include "linked_list.h"
 
 pthread_mutex_t rsrc_thread;
