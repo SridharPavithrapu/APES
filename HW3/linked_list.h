@@ -5,17 +5,17 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef struct {
+typedef struct node_info{
 	
     char alphabet;
 	int count;
 	
 }NODE_INFO;
 
-typedef struct {
+typedef struct node {
 	
     NODE_INFO details;
-    struct NODE* next;
+    struct node* next;
 	
 }NODE;
 

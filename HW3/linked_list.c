@@ -14,7 +14,7 @@ NODE* insert_at_beginning(NODE* head_ptr, char data){
 	}
 	
 	/* Check for empty linked list */
-	if(head_ptr->next == NULL){
+	if(head_ptr == NULL){
 		
 		printf("Linked list is empty, so entering data in first node \n");
 		if(data>='A' && data<='Z'){
@@ -50,7 +50,7 @@ NODE* destroy(NODE* head_ptr){
 	printf("In destroy function \n");
 	NODE *current = head_ptr;
 	NODE *next_element;
-	if(head_ptr->next == NULL){
+	if(head_ptr == NULL){
 		
 		printf("Not deleting any item, since head pointer is NULL");
 		return NULL;
@@ -78,7 +78,7 @@ NODE* traverse(NODE* head_ptr,char data){
 		data = data + 32;
 	}
 
-	if(head_ptr->next == NULL){
+	if(head_ptr == NULL){
 		
 		head_ptr = insert_at_beginning(head_ptr, data);
 	}

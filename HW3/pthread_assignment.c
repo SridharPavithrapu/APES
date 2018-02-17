@@ -21,7 +21,7 @@ NODE* char_occurrence(NODE* head_ptr){
 	
 	printf("\nIn char_occurrence function \n");
 	
-	if(head_ptr->next == NULL){
+	if(head_ptr == NULL){
 		
 		printf("Linked list is empty \n");
 	}
@@ -32,7 +32,7 @@ NODE* char_occurrence(NODE* head_ptr){
 			
 			if(current->details.count > 3){
 				
-				printf("Character \"%s\" exceeded three times\n",current->details.alphabet);
+				printf("Character \"%c\" exceeded three times\n",current->details.alphabet);
 			}
 		   current = current->next;
 		}
@@ -68,6 +68,7 @@ void *thread_function(void *info)
 			}			
 		}
 		char_occurrence(head);
+		destroy(head);
 		fclose(new_fp);
 		
 	}
