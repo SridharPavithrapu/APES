@@ -64,6 +64,7 @@ NODE* destroy(NODE* head_ptr){
 		   current = next_element;
 		}
 		head_ptr = NULL;
+		return head_ptr;
 	}
 	
 }

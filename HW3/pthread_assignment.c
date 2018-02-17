@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include<linux/unistd.h>
-#include<sys/syscall.h>
+#include <unistd.h>
+#include <sys/syscall.h>
 #include "linked_list.h"
 
 pthread_mutex_t rsrc_thread;
@@ -31,12 +31,13 @@ typedef enum{
 	
 }log_type;
 
-void logger(int file_pointer, log_type type, uint32_t process_id, uint32_t posix_thread_id, uint32_t kernel_thread_id, char * message, char * thread_name){
+void logger(FILE* file_pointer, log_type type, unsigned int posix_thread_id, unsigned int kernel_thread_id, char * message, char * thread_name){
 	
 	char log_type[100];
 	time_t Time= time(NULL);
     struct  tm tm = *localtime(&Time);
 	char buffer[500];
+	memset(buffer, 0 , sizeof(buffer));
 	
 	if(type == 0){
 		strncpy(log_type, "Info", strlen("Info"));
@@ -51,10 +52,9 @@ void logger(int file_pointer, log_type type, uint32_t process_id, uint32_t posix
 		strncpy(log_type, "Warning", strlen("Warning"));
 	}
 	
-	sprintf(buffer, "Date:%02d/%02d/%04d Time:%02d:%02d:%02d Log_Type:%s Thread_Name:%s PID%u TID%u Posix_ID%u Message:%s \n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900, tm.tm_hour, tm.tm_min, tm.tm_sec,
-						log_type, thread_name, process_id, kernel_thread_id, posix_thread_id, message); 
+	sprintf(buffer, "Date:%02d/%02d/%04d Time:%02d:%02d:%02d Log_Type:%s Thread_Name:%s TID:%u Posix_ID:%u Message:%s \n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900, tm.tm_hour, tm.tm_min, tm.tm_sec, log_type, thread_name, kernel_thread_id, posix_thread_id, message); 
 						
-	fwrite(buffer , 1, sizeof(buffer), file_pointer);		
+	fwrite(buffer , 1, strlen(buffer), file_pointer);		
 	
 }
 
@@ -93,17 +93,16 @@ void *thread_function(void *info)
 	if(child_thread_information->child_info ==  child_one)
 	{
 		printf("In first child thread \n"); 
-		uint32_t process_id, posix_thread_id, kernel_thread_id;
-		
-		process_id = syscall( __NR_getpid ); 
+		unsigned int posix_thread_id, kernel_thread_id;
+		 
 		posix_thread_id = pthread_self();
 		kernel_thread_id = syscall( __NR_gettid );
 		
 		FILE *first_child_fp;
-		first_child_fp = fopen( child_thread_information-> file_name, "w" );
+		first_child_fp = fopen( child_thread_information-> file_name, "a" );
 		
 		pthread_mutex_lock(&rsrc_thread);
-		logger(first_child_fp, Info, process_id, posix_thread_id, kernel_thread_id, "First child thread started", "first_child_thread");
+		logger(first_child_fp, Info, posix_thread_id, kernel_thread_id, "First child thread started", "first_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		
 		FILE *new_fp;
@@ -116,8 +115,7 @@ void *thread_function(void *info)
 		}
 		
 		char temp;
-		NODE *head;
-		head == NULL;
+		NODE *head = NULL;
 		while ((temp = fgetc(new_fp)) != EOF){
         		printf("read character:%c \n", temp);
 			if((temp>='A' && temp<='Z') || (temp>='a' && temp<='z')){
@@ -129,34 +127,39 @@ void *thread_function(void *info)
 		fclose(new_fp);
 		
 		pthread_mutex_lock(&rsrc_thread);
-		logger(first_child_fp, Info, process_id, posix_thread_id, kernel_thread_id, "First child thread exited", "first_child_thread");
+		logger(first_child_fp, Info, posix_thread_id, kernel_thread_id, "First child thread exited", "first_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
+
+		return NULL;
 		
 	}
 	else if(child_thread_information->child_info ==  child_two)
 	{
 		printf("In second child thread \n"); 
-		uint32_t process_id, posix_thread_id, kernel_thread_id;
-		
-		process_id = syscall( __NR_getpid ); 
+		unsigned int  posix_thread_id, kernel_thread_id;
+		 
 		posix_thread_id = pthread_self();
 		kernel_thread_id = syscall( __NR_gettid );
 		
 		FILE *second_child_fp;
-		second_child_fp = fopen( child_thread_information-> file_name, "w" );
+		second_child_fp = fopen( child_thread_information-> file_name, "a" );
 		
 		pthread_mutex_lock(&rsrc_thread);
-		logger(second_child_fp, Info, process_id, posix_thread_id, kernel_thread_id, "Second child thread started", "second_child_thread");
+		logger(second_child_fp, Info, posix_thread_id, kernel_thread_id, "Second child thread started", "second_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		
 		pthread_mutex_lock(&rsrc_thread);
-		logger(second_child_fp, Info, process_id, posix_thread_id, kernel_thread_id, "Second child thread started", "first_child_thread");
+		logger(second_child_fp, Info, posix_thread_id, kernel_thread_id, "Second child thread exited", "second_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
+
+		return NULL;
 	}	
 	else
 	{
 		printf("Inavlid thread id \n");
+		return NULL;
 	}	
+	
 }
 
 int main(int argc, char *argv[])
@@ -164,7 +167,7 @@ int main(int argc, char *argv[])
 	int8_t status;
 	pthread_t first_child_thread, second_child_thread;
 	char output_file_name[100];
-	uint32_t process_id, posix_thread_id, kernel_thread_id;
+	unsigned int posix_thread_id, kernel_thread_id;
 	
 	/* Set default protocol for mutex */
   	pthread_mutex_init(&rsrc_thread, NULL);
@@ -185,15 +188,14 @@ int main(int argc, char *argv[])
 	printf("output file name is:%s\n", output_file_name);
 	
 	FILE *master_fp;
-	master_fp = fopen( output_file_name , "w" );
+	master_fp = fopen( output_file_name , "a" );
 	
-	process_id = syscall( __NR_getpid ); 
 	posix_thread_id = pthread_self();
 	kernel_thread_id = syscall( __NR_gettid ); 
 	
 	pthread_mutex_lock(&rsrc_thread);
-	logger(master_fp, Info, process_id, posix_thread_id, kernel_thread_id, "Master thread started", "master_thread");
-	logger(master_fp, Info, process_id, posix_thread_id, kernel_thread_id, "Master thread creating child threads", "master_thread");
+	logger(master_fp, Info, posix_thread_id, kernel_thread_id, "Master thread started", "master_thread");
+	logger(master_fp, Info, posix_thread_id, kernel_thread_id, "Master thread creating child threads", "master_thread");
 	pthread_mutex_unlock(&rsrc_thread);
 	
 	
@@ -230,6 +232,10 @@ int main(int argc, char *argv[])
 	
 	if(pthread_mutex_destroy(&rsrc_thread) != 0)
 		perror("Error in mutex destroy\n");
+
+	pthread_mutex_lock(&rsrc_thread);
+	logger(master_fp, Info, posix_thread_id, kernel_thread_id, "Master thread exited", "master_thread");
+	pthread_mutex_unlock(&rsrc_thread);
 	
 	exit(1);
 	

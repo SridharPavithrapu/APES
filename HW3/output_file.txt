@@ -1,0 +1,7 @@
+Date:17/02/2018 Time:02:16:48 Log_Type:Info Thread_Name:second_child_thread TID:3274 Posix_ID:3111311104 Message:Second child thread started 
+Date:17/02/2018 Time:02:16:48 Log_Type:Info Thread_Name:second_child_thread TID:3274 Posix_ID:3111311104 Message:Second child thread exited 
+Date:17/02/2018 Time:02:16:48 Log_Type:Info Thread_Name:first_child_thread TID:3273 Posix_ID:3119703808 Message:First child thread started 
+Date:17/02/2018 Time:02:16:48 Log_Type:Info Thread_Name:first_child_thread TID:3273 Posix_ID:3119703808 Message:First child thread exited 
+Date:17/02/2018 Time:02:16:48 Log_Type:Info Thread_Name:master_thread TID:3272 Posix_ID:3128030976 Message:Master thread started 
+Date:17/02/2018 Time:02:16:48 Log_Type:Info Thread_Name:master_thread TID:3272 Posix_ID:3128030976 Message:Master thread creating child threads 
+Date:17/02/2018 Time:02:16:48 Log_Type:Info Thread_Name:master_thread TID:3272 Posix_ID:3128030976 Message:Master thread exited 
