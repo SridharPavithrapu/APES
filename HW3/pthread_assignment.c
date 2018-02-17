@@ -5,6 +5,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <sys/syscall.h>
+#include <sys/time.h>
 #include "linked_list.h"
 
 pthread_mutex_t rsrc_thread;
@@ -86,6 +87,13 @@ NODE* char_occurrence(NODE* head_ptr){
 	
 }
 
+
+void periodic_task  (int signum)
+{
+ static int count = 0;
+ printf (" periodic task in C++ timer %d \n", ++count);
+}
+
 void *thread_function(void *info)
 {
 	thread_info *child_thread_information = (thread_info*)info;
@@ -147,6 +155,28 @@ void *thread_function(void *info)
 		pthread_mutex_lock(&rsrc_thread);
 		logger(second_child_fp, Info, posix_thread_id, kernel_thread_id, "Second child thread started", "second_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
+		
+		struct sigaction sa;
+		struct itimerval timer;
+		
+		 /* Install periodic_task  as the signal handler for SIGVTALRM. */
+		 memset (&sa, 0, sizeof (sa));
+		 sa.sa_handler = &periodic_task ;
+		 sigaction (SIGVTALRM, &sa, NULL);
+
+		 /* Configure the timer to expire after 100 msec... */
+		 timer.it_value.tv_sec = 0;
+		 timer.it_value.tv_usec = 100000;
+
+		 /* ... and every 100 msec after that. */
+		 timer.it_interval.tv_sec = 0;
+		 timer.it_interval.tv_usec = 100000;
+
+		 /* Start a virtual timer. It counts down whenever this process is    executing. */
+		 setitimer (ITIMER_VIRTUAL, &timer, NULL);
+
+		 /* Do busy work. */
+		 while (1);
 		
 		pthread_mutex_lock(&rsrc_thread);
 		logger(second_child_fp, Info, posix_thread_id, kernel_thread_id, "Second child thread exited", "second_child_thread");
