@@ -80,5 +80,6 @@ int main(int argc, char *argv[])
 	pthread_join(first_child_thread, NULL);
 	pthread_join(second_child_thread, NULL);
 	
+	exit(1);
 	
 }
