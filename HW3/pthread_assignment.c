@@ -11,6 +11,10 @@
 
 pthread_mutex_t rsrc_thread;
 
+FILE *first_child_fp;
+FILE *second_child_fp;
+FILE *master_fp;
+
 typedef enum{
 	child_one = 0,
 	child_two = 1
@@ -89,10 +93,50 @@ NODE* char_occurrence(NODE* head_ptr){
 }
 
 
-void periodic_task  (int signum)
+void second_child_signal_handler(int signum)
 {
- static int count = 0;
- printf (" periodic task in C++ timer %d \n", ++count);
+	static int count = 0;
+	FILE *fp;
+	char * line = NULL;
+	size_t len = 0;
+    ssize_t read;
+	if(signum == SIGVTALRM){
+	 
+		printf (" periodic task in C++ timer %d \n", ++count);
+		fp = fopen("/proc/stat","r");
+		if (fp == NULL)
+			printf("Error opening file\n");
+
+		while ((read = getline(&line, &len, fp)) != -1) {
+			printf("Retrieved line of length %zu :\n", read);
+			printf("%s\n", line);
+		}
+
+		fclose(fp);
+		if (line)
+			free(line);
+		
+	}
+	else if(signum == SIGUSR1 || signum == SIGUSR2){
+		printf (" Received usr1 or usr2 signal for second child thread \n");
+		fclose(second_child_fp);
+	}
+}
+
+void master_signal_handler(int signum)
+{
+	if(signum == SIGUSR1 || signum == SIGUSR2){
+		printf (" Received usr1 or usr2 signal for main thread \n");
+		fclose(master_fp);
+	}
+}
+
+void first_child_signal_handler(int signum)
+{
+	if(signum == SIGUSR1 || signum == SIGUSR2){
+		printf (" Received usr1 or usr2 signal for first child thread \n");
+		fclose(first_child_fp);
+	}
 }
 
 void *thread_function(void *info)
@@ -107,7 +151,15 @@ void *thread_function(void *info)
 		posix_thread_id = pthread_self();
 		kernel_thread_id = syscall( __NR_gettid );
 		
-		FILE *first_child_fp;
+		struct sigaction sa_child_one;
+		
+		 /* Install periodic_task  as the signal handler for SIGVTALRM. */
+		 memset (&sa_child_one, 0, sizeof (sa_child_one));
+		 sa_child_one.sa_handler = &first_child_signal_handler ;
+		 sigaction (SIGUSR1, &sa_child_one, NULL);
+		 sigaction (SIGUSR2, &sa_child_one, NULL);
+		
+		
 		first_child_fp = fopen( child_thread_information-> file_name, "a" );
 		
 		pthread_mutex_lock(&rsrc_thread);
@@ -150,7 +202,7 @@ void *thread_function(void *info)
 		posix_thread_id = pthread_self();
 		kernel_thread_id = syscall( __NR_gettid );
 		
-		FILE *second_child_fp;
+		
 		second_child_fp = fopen( child_thread_information-> file_name, "a" );
 		
 		pthread_mutex_lock(&rsrc_thread);
@@ -162,8 +214,10 @@ void *thread_function(void *info)
 		
 		 /* Install periodic_task  as the signal handler for SIGVTALRM. */
 		 memset (&sa, 0, sizeof (sa));
-		 sa.sa_handler = &periodic_task ;
+		 sa.sa_handler = &second_child_signal_handler ;
 		 sigaction (SIGVTALRM, &sa, NULL);
+		 sigaction (SIGUSR1, &sa, NULL);
+		 sigaction (SIGUSR2, &sa, NULL);
 
 		 /* Configure the timer to expire after 100 msec... */
 		 timer.it_value.tv_sec = 0;
@@ -218,7 +272,7 @@ int main(int argc, char *argv[])
 	
 	printf("output file name is:%s\n", output_file_name);
 	
-	FILE *master_fp;
+	
 	master_fp = fopen( output_file_name , "a" );
 	
 	posix_thread_id = pthread_self();
@@ -228,6 +282,14 @@ int main(int argc, char *argv[])
 	logger(master_fp, Info, posix_thread_id, kernel_thread_id, "Master thread started", "master_thread");
 	logger(master_fp, Info, posix_thread_id, kernel_thread_id, "Master thread creating child threads", "master_thread");
 	pthread_mutex_unlock(&rsrc_thread);
+	
+	struct sigaction sa_master;
+		
+	 /* Install periodic_task  as the signal handler for SIGVTALRM. */
+	 memset (&sa_master, 0, sizeof (sa_master));
+	 sa_master.sa_handler = &first_child_signal_handler ;
+	 sigaction (SIGUSR1, &sa_master, NULL);
+	 sigaction (SIGUSR2, &sa_master, NULL);
 	
 	
 	/* Writing information to structure */
