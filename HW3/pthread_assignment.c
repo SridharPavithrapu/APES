@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef enum{
 	child_one = 0,
@@ -37,13 +38,14 @@ int main(int argc, char *argv[])
 {
 	int status;
 	pthread_t first_child_thread, second_child_thread;
-	char *output_file_name;
+	char output_file_name[100];
 	
-	thread_info *first_child;
-	thread_info *second_child;
+	thread_info *first_child = malloc(sizeof(thread_info));
+	thread_info *second_child = malloc(sizeof(thread_info));
 	
 	if(argc > 1)
 	{
+		printf("%s",argv[1]);
 		strncpy(output_file_name, argv[1],strlen(argv[1]));
 	}
 	else
@@ -51,12 +53,15 @@ int main(int argc, char *argv[])
 		exit(1);
 	}	
 	
+	printf("output file name is:%s\n", output_file_name);
 	/* Writing information to structure */
-	strncpy(first_child->file_name, output_file_name, strlen(output_file_name));
+	first_child->file_name =  output_file_name;
 	first_child->child_info = child_one;
 	
-	strncpy(second_child->file_name, output_file_name, strlen(output_file_name));
+	second_child->file_name = output_file_name;
 	second_child->child_info = child_two;
+
+	printf("Started creating threads\n");
 	
 	/* Creating first child thread */
 	status = pthread_create(&first_child_thread, NULL, thread_function, (void *) first_child);
@@ -69,7 +74,7 @@ int main(int argc, char *argv[])
 	
 	/* Creating second child thread */
 	status = pthread_create(&second_child_thread, NULL, thread_function, (void *) second_child);
-    if (status)
+    	if (status)
 	{
 		printf("ERROR; pthread_create() for second child thread with status is %d\n", status);
 		perror(NULL); 
