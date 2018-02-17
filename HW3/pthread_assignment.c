@@ -2,7 +2,12 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
+#include<linux/unistd.h>
+#include<sys/syscall.h>
 #include "linked_list.h"
+
+pthread_mutex_t rsrc_thread;
 
 typedef enum{
 	child_one = 0,
@@ -16,6 +21,42 @@ typedef struct{
 	child_enum child_info;
 	
 }thread_info;
+
+typedef enum{
+	
+	Info = 0,
+	Debug = 1,
+	Error = 2,
+	Warning = 3
+	
+}log_type;
+
+void logger(int file_pointer, log_type type, uint32_t process_id, uint32_t posix_thread_id, uint32_t kernel_thread_id, char * message, char * thread_name){
+	
+	char log_type[100];
+	time_t Time= time(NULL);
+    struct  tm tm = *localtime(&Time);
+	char buffer[500];
+	
+	if(type == 0){
+		strncpy(log_type, "Info", strlen("Info"));
+	}
+	else if(type == 1){
+		strncpy(log_type, "Debug", strlen("Debug"));
+	}
+	else if(type == 2){
+		strncpy(log_type, "Error", strlen("Error"));
+	}
+	else{
+		strncpy(log_type, "Warning", strlen("Warning"));
+	}
+	
+	sprintf(buffer, "Date:%02d/%02d/%04d Time:%02d:%02d:%02d Log_Type:%s Thread_Name:%s PID%u TID%u Posix_ID%u Message:%s \n", tm.tm_mday, tm.tm_mon+1, tm.tm_year+1900, tm.tm_hour, tm.tm_min, tm.tm_sec,
+						log_type, thread_name, process_id, kernel_thread_id, posix_thread_id, message); 
+						
+	fwrite(buffer , 1, sizeof(buffer), file_pointer);		
+	
+}
 
 NODE* char_occurrence(NODE* head_ptr){
 	
@@ -52,6 +93,18 @@ void *thread_function(void *info)
 	if(child_thread_information->child_info ==  child_one)
 	{
 		printf("In first child thread \n"); 
+		uint32_t process_id, posix_thread_id, kernel_thread_id;
+		
+		process_id = syscall( __NR_getpid ); 
+		posix_thread_id = pthread_self();
+		kernel_thread_id = syscall( __NR_gettid );
+		
+		FILE *first_child_fp;
+		first_child_fp = fopen( child_thread_information-> file_name, "w" );
+		
+		pthread_mutex_lock(&rsrc_thread);
+		logger(first_child_fp, Info, process_id, posix_thread_id, kernel_thread_id, "First child thread started", "first_child_thread");
+		pthread_mutex_unlock(&rsrc_thread);
 		
 		FILE *new_fp;
 		new_fp = fopen("sample.txt","r");
@@ -75,10 +128,30 @@ void *thread_function(void *info)
 		destroy(head);
 		fclose(new_fp);
 		
+		pthread_mutex_lock(&rsrc_thread);
+		logger(first_child_fp, Info, process_id, posix_thread_id, kernel_thread_id, "First child thread exited", "first_child_thread");
+		pthread_mutex_unlock(&rsrc_thread);
+		
 	}
 	else if(child_thread_information->child_info ==  child_two)
 	{
 		printf("In second child thread \n"); 
+		uint32_t process_id, posix_thread_id, kernel_thread_id;
+		
+		process_id = syscall( __NR_getpid ); 
+		posix_thread_id = pthread_self();
+		kernel_thread_id = syscall( __NR_gettid );
+		
+		FILE *second_child_fp;
+		second_child_fp = fopen( child_thread_information-> file_name, "w" );
+		
+		pthread_mutex_lock(&rsrc_thread);
+		logger(second_child_fp, Info, process_id, posix_thread_id, kernel_thread_id, "Second child thread started", "second_child_thread");
+		pthread_mutex_unlock(&rsrc_thread);
+		
+		pthread_mutex_lock(&rsrc_thread);
+		logger(second_child_fp, Info, process_id, posix_thread_id, kernel_thread_id, "Second child thread started", "first_child_thread");
+		pthread_mutex_unlock(&rsrc_thread);
 	}	
 	else
 	{
@@ -88,9 +161,13 @@ void *thread_function(void *info)
 
 int main(int argc, char *argv[])
 {
-	int status;
+	int8_t status;
 	pthread_t first_child_thread, second_child_thread;
 	char output_file_name[100];
+	uint32_t process_id, posix_thread_id, kernel_thread_id;
+	
+	/* Set default protocol for mutex */
+  	pthread_mutex_init(&rsrc_thread, NULL);
 	
 	thread_info *first_child = malloc(sizeof(thread_info));
 	thread_info *second_child = malloc(sizeof(thread_info));
@@ -106,6 +183,20 @@ int main(int argc, char *argv[])
 	}	
 	
 	printf("output file name is:%s\n", output_file_name);
+	
+	FILE *master_fp;
+	master_fp = fopen( output_file_name , "w" );
+	
+	process_id = syscall( __NR_getpid ); 
+	posix_thread_id = pthread_self();
+	kernel_thread_id = syscall( __NR_gettid ); 
+	
+	pthread_mutex_lock(&rsrc_thread);
+	logger(master_fp, Info, process_id, posix_thread_id, kernel_thread_id, "Master thread started", "master_thread");
+	logger(master_fp, Info, process_id, posix_thread_id, kernel_thread_id, "Master thread creating child threads", "master_thread");
+	pthread_mutex_unlock(&rsrc_thread);
+	
+	
 	/* Writing information to structure */
 	first_child->file_name =  output_file_name;
 	first_child->child_info = child_one;
@@ -136,6 +227,9 @@ int main(int argc, char *argv[])
 	/* Blocking the main master thread till all the threads complete its execution */
 	pthread_join(first_child_thread, NULL);
 	pthread_join(second_child_thread, NULL);
+	
+	if(pthread_mutex_destroy(&rsrc_thread) != 0)
+		perror("Error in mutex destroy\n");
 	
 	exit(1);
 	
