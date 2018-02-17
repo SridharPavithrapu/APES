@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <string.h>
+#include "linked_list.h"
 
 typedef enum{
 	child_one = 0,
@@ -16,6 +17,30 @@ typedef struct{
 	
 }thread_info;
 
+NODE* char_occurrence(NODE* head_ptr){
+	
+	printf("\nIn char_occurrence function \n");
+	
+	if(head_ptr->next == NULL){
+		
+		printf("Linked list is empty \n");
+	}
+	else{
+		
+		NODE *current = head_ptr;
+		while (current != NULL){
+			
+			if(current->details.count > 3){
+				
+				printf("Character \"%s\" exceeded three times\n",current->details.alphabet);
+			}
+		   current = current->next;
+		}
+	}
+	return head_ptr;
+	
+}
+
 void *thread_function(void *info)
 {
 	thread_info *child_thread_information = (thread_info*)info;
@@ -23,6 +48,28 @@ void *thread_function(void *info)
 	if(child_thread_information->child_info ==  child_one)
 	{
 		printf("In first child thread \n"); 
+		
+		FILE *new_fp;
+		new_fp = fopen("Valentinesday.txt","r");
+		
+		if(new_fp == NULL){
+			
+			printf("Error in reading file \n"); 
+			exit(0);
+		}
+		
+		char temp;
+		NODE *head = (NODE *)malloc(sizeof(NODE));
+		
+		while ((temp = fgetc(new_fp)) != EOF){
+        
+			if((temp>='A' && temp<='Z') || (temp>='a' && temp<='z')){
+				traverse(head,temp);
+			}			
+		}
+		char_occurrence(head);
+		fclose(new_fp);
+		
 	}
 	else if(child_thread_information->child_info ==  child_two)
 	{
