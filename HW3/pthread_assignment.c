@@ -28,14 +28,18 @@ NODE* char_occurrence(NODE* head_ptr){
 	else{
 		
 		NODE *current = head_ptr;
-		while (current != NULL){
+		while (current->next != NULL){
 			
-			if(current->details.count > 3){
+			if(current->details.count == 3){
 				
 				printf("Character \"%c\" exceeded three times\n",current->details.alphabet);
 			}
 		   current = current->next;
 		}
+		if(current->details.count == 3){
+				
+				printf("Character \"%c\" exceeded three times\n",current->details.alphabet);
+			}
 	}
 	return head_ptr;
 	
@@ -50,7 +54,7 @@ void *thread_function(void *info)
 		printf("In first child thread \n"); 
 		
 		FILE *new_fp;
-		new_fp = fopen("Valentinesday.txt","r");
+		new_fp = fopen("sample.txt","r");
 		
 		if(new_fp == NULL){
 			
@@ -59,12 +63,12 @@ void *thread_function(void *info)
 		}
 		
 		char temp;
-		NODE *head = (NODE *)malloc(sizeof(NODE));
-		
+		NODE *head;
+		head == NULL;
 		while ((temp = fgetc(new_fp)) != EOF){
-        
+        		printf("read character:%c \n", temp);
 			if((temp>='A' && temp<='Z') || (temp>='a' && temp<='z')){
-				traverse(head,temp);
+				head = traverse(head,temp);
 			}			
 		}
 		char_occurrence(head);
