@@ -9,14 +9,7 @@
 #include <signal.h>
 #include "linked_list.h"
 
-pthread_mutex_t rsrc_thread;
-unsigned int posix_thread_id_master, kernel_thread_id_master;
-unsigned int posix_thread_id_first_child, kernel_thread_id_first_child;
-unsigned int posix_thread_id_second_child, kernel_thread_id_second_child;
 
-FILE *first_child_fp;
-FILE *second_child_fp;
-FILE *master_fp;
 
 typedef enum{
 	child_one = 0,
@@ -40,13 +33,26 @@ typedef enum{
 	
 }log_type;
 
+pthread_mutex_t rsrc_thread;
+unsigned int posix_thread_id_master, kernel_thread_id_master;
+unsigned int posix_thread_id_first_child, kernel_thread_id_first_child;
+unsigned int posix_thread_id_second_child, kernel_thread_id_second_child;
+
+FILE *first_child_fp;
+FILE *second_child_fp;
+FILE *master_fp;
+
+thread_info *first_child_info;
+thread_info *second_child_info;
+
 void logger(FILE* file_pointer, log_type type, unsigned int posix_thread_id, unsigned int kernel_thread_id, char * message, char * thread_name){
 	
 	char log_type[100];
 	time_t Time= time(NULL);
     struct  tm tm = *localtime(&Time);
-	char buffer[500];
+	char buffer[2000];
 	memset(buffer, 0 , sizeof(buffer));
+	memset(log_type, 0 , sizeof(log_type));
 	
 	if(type == 0){
 		strncpy(log_type, "Info", strlen("Info"));
@@ -111,15 +117,18 @@ void second_child_signal_handler(int signum)
 			printf("Error opening file\n");
 		}
 		while ((read = getline(&line, &len, fp)) != -1) {
-			printf("%s\n", line);
-		}
+			printf("line:%s\n",line);
+			pthread_mutex_lock(&rsrc_thread);
+			logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, line, "second_child_thread");
+			pthread_mutex_unlock(&rsrc_thread);
+			}
 
 		fclose(fp);
 		if (line)
 			free(line);
 		
 	}
-	else if(signum == SIGUSR1 || signum == SIGUSR2){
+	else if(signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGINT){
 		printf (" Received usr1 or usr2 signal for second child thread \n");
 		pthread_mutex_lock(&rsrc_thread);
 		logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, "Second child thread exited", "second_child_thread");
@@ -130,18 +139,20 @@ void second_child_signal_handler(int signum)
 
 void master_signal_handler(int signum)
 {
-	if(signum == SIGUSR1 || signum == SIGUSR2){
+	if(signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGINT){
 		printf (" Received usr1 or usr2 signal for main thread \n");
 		pthread_mutex_lock(&rsrc_thread);
 		logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread exited", "master_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		fclose(master_fp);
+		free(first_child_info);
+		free(second_child_info);
 	}
 }
 
 void first_child_signal_handler(int signum)
 {
-	if(signum == SIGUSR1 || signum == SIGUSR2){
+	if(signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGINT){
 		printf (" Received usr1 or usr2 signal for first child thread \n");
 		pthread_mutex_lock(&rsrc_thread);
 		logger(first_child_fp, Info, posix_thread_id_first_child, kernel_thread_id_first_child, "First child thread exited", "first_child_thread");
@@ -194,9 +205,11 @@ void *thread_function(void *info)
 				head = traverse(head,temp);
 			}			
 		}
-		char_occurrence(head);
-		destroy(head);
+		head = char_occurrence(head);
+		head = destroy(head);
+		printf("Destroyed all the nodes\n");
 		fclose(new_fp);
+		fclose(first_child_fp);
 
 		return NULL;
 		
@@ -211,9 +224,12 @@ void *thread_function(void *info)
 		
 		second_child_fp = fopen( child_thread_information-> file_name, "a" );
 		
+		
 		pthread_mutex_lock(&rsrc_thread);
 		logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, "Second child thread started", "second_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
+
+		
 		
 		struct sigaction sa;
 		struct itimerval timer;
@@ -240,7 +256,7 @@ void *thread_function(void *info)
 		/* Do busy work. */
 		while (1);
 		
-		
+		fclose(second_child_fp);
 
 		return NULL;
 	}	
@@ -261,8 +277,8 @@ int main(int argc, char *argv[])
 	/* Set default protocol for mutex */
   	pthread_mutex_init(&rsrc_thread, NULL);
 	
-	thread_info *first_child = malloc(sizeof(thread_info));
-	thread_info *second_child = malloc(sizeof(thread_info));
+	first_child_info = malloc(sizeof(thread_info));
+	second_child_info = malloc(sizeof(thread_info));
 	
 	if(argc > 1)
 	{
@@ -298,16 +314,16 @@ int main(int argc, char *argv[])
 	
 	
 	/* Writing information to structure */
-	first_child->file_name =  output_file_name;
-	first_child->child_info = child_one;
+	first_child_info->file_name =  output_file_name;
+	first_child_info->child_info = child_one;
 	
-	second_child->file_name = output_file_name;
-	second_child->child_info = child_two;
+	second_child_info->file_name = output_file_name;
+	second_child_info->child_info = child_two;
 
 	printf("Started creating threads\n");
 	
 	/* Creating first child thread */
-	status = pthread_create(&first_child_thread, NULL, thread_function, (void *) first_child);
+	status = pthread_create(&first_child_thread, NULL, thread_function, (void *) first_child_info);
 	if (status)
 	{
 		printf("ERROR; pthread_create() for first child thread with status is %d\n", status);
@@ -316,7 +332,7 @@ int main(int argc, char *argv[])
 	}
 	
 	/* Creating second child thread */
-	status = pthread_create(&second_child_thread, NULL, thread_function, (void *) second_child);
+	status = pthread_create(&second_child_thread, NULL, thread_function, (void *) second_child_info);
     	if (status)
 	{
 		printf("ERROR; pthread_create() for second child thread with status is %d\n", status);
@@ -330,6 +346,10 @@ int main(int argc, char *argv[])
 	
 	if(pthread_mutex_destroy(&rsrc_thread) != 0)
 		perror("Error in mutex destroy\n");
+
+	fclose(master_fp);
+	free(first_child_info);
+	free(second_child_info);
 	
 	exit(1);
 	
