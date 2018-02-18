@@ -1,0 +1,547 @@
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:first_child_thread TID:5350 Posix_ID:432703232 Message:First child thread started 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:Second child thread started 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  176984 795 43245 2637216 15678 0 989 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42774 69 10098 662027 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45891 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44150 340 10176 659744 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44167 181 11186 662204 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4502554 123 7485 0 0 0 0 0 0 0 0 0 0 134 0 0 7224 0 0 0 12600 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6162791
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 4
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3488102 2 2193330 1336 13176 28592 0 4797 770241 0 476628
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177004 795 43247 2637235 15678 0 989 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42777 69 10098 662035 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45901 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44153 340 10176 659752 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44172 181 11187 662208 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4502873 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6163415
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 1
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3488361 2 2193525 1336 13177 28593 0 4798 770276 0 476654
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177019 795 43248 2637259 15678 0 989 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42778 69 10098 662044 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45911 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44154 340 10176 659761 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44174 181 11188 662214 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4503063 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6163747
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3488535 2 2193668 1336 13177 28593 0 4798 770297 0 476664
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177032 795 43249 2637284 15678 0 989 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42779 69 10098 662053 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45921 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44155 340 10176 659770 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44177 181 11189 662221 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4503248 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6164068
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3488703 2 2193806 1336 13177 28593 0 4798 770316 0 476675
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177046 795 43250 2637309 15678 0 989 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42780 69 10098 662062 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45931 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44155 340 10176 659779 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44179 181 11190 662227 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4503437 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6164393
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3488875 2 2193948 1336 13177 28593 0 4798 770336 0 476685
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177062 795 43252 2637331 15678 0 989 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42781 69 10098 662071 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45941 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44156 340 10176 659788 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44182 181 11192 662232 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4503658 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6164917
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 4
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3489070 2 2194108 1336 13177 28593 0 4798 770361 0 476695
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177076 795 43253 2637356 15678 0 989 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42782 69 10098 662080 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45951 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44157 340 10176 659797 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44185 181 11193 662238 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4503845 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6165229
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 1
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:38 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3489247 2 2194252 1336 13177 28593 0 4798 770384 0 476705
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177090 795 43253 2637380 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42783 69 10098 662089 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45961 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44158 340 10176 659806 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44187 181 11193 662245 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4504038 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6165554
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3489413 2 2194388 1336 13177 28593 0 4798 770404 0 476715
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177103 795 43255 2637406 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42783 69 10098 662098 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45971 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44158 340 10177 659815 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44189 181 11194 662252 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4504222 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6165865
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3489577 2 2194525 1336 13177 28593 0 4798 770421 0 476725
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177122 795 43256 2637425 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42785 69 10098 662106 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45981 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44160 340 10177 659823 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44194 181 11195 662255 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4504463 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6166177
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3489780 2 2194697 1336 13177 28593 0 4798 770442 0 476735
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177136 795 43257 2637450 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42786 69 10098 662115 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 45991 203 11784 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44161 340 10177 659832 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44196 181 11196 662262 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4504648 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6166510
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 1
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3489942 2 2194829 1336 13177 28593 0 4798 770462 0 476745
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177151 795 43259 2637472 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42786 69 10098 662124 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46001 203 11785 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44162 340 10177 659841 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44201 181 11198 662266 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4504884 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6167030
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 1
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3490154 2 2194998 1336 13177 28593 0 4798 770495 0 476755
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177166 795 43260 2637496 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42787 69 10098 662133 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46011 203 11785 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44163 340 10177 659850 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44203 181 11199 662272 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4505086 123 7486 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6167363
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3490327 2 2195139 1336 13177 28593 0 4798 770517 0 476765
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177180 795 43261 2637521 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42788 69 10098 662142 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46021 203 11785 653239 3779 0 337 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44163 340 10177 659859 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44206 181 11200 662279 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4505302 123 7487 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6167758
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3490503 2 2195279 1336 13177 28593 0 4799 770542 0 476775
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177194 795 43263 2637545 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42789 69 10098 662151 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46031 203 11785 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44164 340 10177 659868 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44208 181 11201 662285 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4505500 123 7487 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6168083
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3490684 2 2195427 1336 13177 28593 0 4799 770564 0 476786
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177208 795 43264 2637570 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42790 69 10099 662160 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46041 203 11785 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44165 340 10177 659877 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44210 181 11202 662292 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4505686 123 7487 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6168405
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 1
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3490849 2 2195566 1336 13177 28593 0 4799 770580 0 476796
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177222 795 43265 2637595 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42791 69 10099 662169 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46051 203 11785 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44166 340 10177 659887 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44213 181 11203 662298 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4505875 123 7489 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6168739
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:39 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3491020 2 2195705 1336 13177 28593 0 4801 770600 0 476806
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177236 795 43266 2637620 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42792 69 10099 662179 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46061 203 11785 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44167 340 10177 659896 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44215 181 11203 662305 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4506062 123 7491 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6169077
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 2
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3491185 2 2195837 1336 13177 28593 0 4803 770621 0 476816
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177250 795 43267 2637646 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42792 69 10099 662188 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46071 203 11786 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44168 340 10177 659905 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44217 181 11204 662312 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4506252 123 7494 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6169412
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 1
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3491355 2 2195973 1336 13177 28593 0 4806 770642 0 476826
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177263 795 43268 2637671 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42793 69 10099 662197 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46081 203 11786 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44168 340 10177 659914 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44219 181 11205 662318 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4506458 123 7497 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6169799
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 3
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3491534 2 2196113 1336 13177 28593 0 4809 770668 0 476836
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177276 795 43269 2637698 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42794 69 10099 662207 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46091 203 11786 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44169 340 10177 659924 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44221 181 11205 662326 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4506627 123 7497 0 0 0 0 0 0 0 0 0 0 134 0 0 7226 0 0 0 12601 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6170054
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 3
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3491691 2 2196242 1336 13177 28593 0 4809 770684 0 476848
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177290 795 43270 2637723 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42794 69 10099 662216 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46101 203 11786 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44170 340 10178 659933 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44223 181 11207 662333 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4506835 123 7498 0 0 0 0 0 0 0 0 0 0 134 0 0 7228 0 0 0 12602 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6170413
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:processes 5356
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_running 1
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:softirq 3491874 2 2196386 1337 13178 28594 0 4810 770709 0 476858
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu  177303 795 43271 2637748 15678 0 990 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu0 42795 69 10099 662226 3977 0 179 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu1 46111 203 11786 653239 3779 0 338 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu2 44170 340 10178 659942 3355 0 182 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:cpu3 44225 181 11208 662339 4565 0 289 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:intr 4507015 123 7498 0 0 0 0 0 0 0 0 0 0 134 0 0 7228 0 0 0 12602 0 26621 29467 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:ctxt 6170730
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:19:42:40 Log_Type:Info Thread_Name:second_child_thread TID:5351 Posix_ID:424310528 Message:p
