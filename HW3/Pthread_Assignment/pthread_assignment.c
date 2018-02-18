@@ -212,10 +212,12 @@ void second_child_signal_handler(int signum)
 	else if(signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGINT){
 		printf (" Received usr1/usr2/sigint signal for second child thread \n");
 		
-		pthread_mutex_lock(&rsrc_thread);
-		logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, "Second child thread exited", "second_child_thread");
-		pthread_mutex_unlock(&rsrc_thread);
-		fclose(second_child_fp);
+		if(second_child_fp != NULL){
+			pthread_mutex_lock(&rsrc_thread);
+			logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, "Second child thread exited", "second_child_thread");
+			pthread_mutex_unlock(&rsrc_thread);
+			fclose(second_child_fp);
+		}
 		
 		pthread_cancel(second_child_thread);
 	}
@@ -242,11 +244,12 @@ void first_child_signal_handler(int signum)
 			destroy(head);
 		}
 
-		pthread_mutex_lock(&rsrc_thread);
-		logger(first_child_fp, Info, posix_thread_id_first_child, kernel_thread_id_first_child, "First child thread exited", "first_child_thread");
-		pthread_mutex_unlock(&rsrc_thread);
-		fclose(first_child_fp);
-		
+		if(first_child_fp != NULL){
+			pthread_mutex_lock(&rsrc_thread);
+			logger(first_child_fp, Info, posix_thread_id_first_child, kernel_thread_id_first_child, "First child thread exited", "first_child_thread");
+			pthread_mutex_unlock(&rsrc_thread);
+			fclose(first_child_fp);
+		}
 		pthread_cancel(first_child_thread);
 	}
 }
