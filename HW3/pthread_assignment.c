@@ -10,6 +10,9 @@
 #include "linked_list.h"
 
 pthread_mutex_t rsrc_thread;
+unsigned int posix_thread_id_master, kernel_thread_id_master;
+unsigned int posix_thread_id_first_child, kernel_thread_id_first_child;
+unsigned int posix_thread_id_second_child, kernel_thread_id_second_child;
 
 FILE *first_child_fp;
 FILE *second_child_fp;
@@ -104,11 +107,10 @@ void second_child_signal_handler(int signum)
 	 
 		printf (" periodic task in C++ timer %d \n", ++count);
 		fp = fopen("/proc/stat","r");
-		if (fp == NULL)
+		if (fp == NULL){
 			printf("Error opening file\n");
-
+		}
 		while ((read = getline(&line, &len, fp)) != -1) {
-			printf("Retrieved line of length %zu :\n", read);
 			printf("%s\n", line);
 		}
 
@@ -119,6 +121,9 @@ void second_child_signal_handler(int signum)
 	}
 	else if(signum == SIGUSR1 || signum == SIGUSR2){
 		printf (" Received usr1 or usr2 signal for second child thread \n");
+		pthread_mutex_lock(&rsrc_thread);
+		logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, "Second child thread exited", "second_child_thread");
+		pthread_mutex_unlock(&rsrc_thread);
 		fclose(second_child_fp);
 	}
 }
@@ -127,6 +132,9 @@ void master_signal_handler(int signum)
 {
 	if(signum == SIGUSR1 || signum == SIGUSR2){
 		printf (" Received usr1 or usr2 signal for main thread \n");
+		pthread_mutex_lock(&rsrc_thread);
+		logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread exited", "master_thread");
+		pthread_mutex_unlock(&rsrc_thread);
 		fclose(master_fp);
 	}
 }
@@ -135,6 +143,9 @@ void first_child_signal_handler(int signum)
 {
 	if(signum == SIGUSR1 || signum == SIGUSR2){
 		printf (" Received usr1 or usr2 signal for first child thread \n");
+		pthread_mutex_lock(&rsrc_thread);
+		logger(first_child_fp, Info, posix_thread_id_first_child, kernel_thread_id_first_child, "First child thread exited", "first_child_thread");
+		pthread_mutex_unlock(&rsrc_thread);
 		fclose(first_child_fp);
 	}
 }
@@ -146,7 +157,6 @@ void *thread_function(void *info)
 	if(child_thread_information->child_info ==  child_one)
 	{
 		printf("In first child thread \n"); 
-		unsigned int posix_thread_id, kernel_thread_id;
 		 
 		posix_thread_id = pthread_self();
 		kernel_thread_id = syscall( __NR_gettid );
@@ -158,12 +168,13 @@ void *thread_function(void *info)
 		 sa_child_one.sa_handler = &first_child_signal_handler ;
 		 sigaction (SIGUSR1, &sa_child_one, NULL);
 		 sigaction (SIGUSR2, &sa_child_one, NULL);
+		 sigaction (SIGINT, &sa_child_one, NULL);
 		
 		
 		first_child_fp = fopen( child_thread_information-> file_name, "a" );
 		
 		pthread_mutex_lock(&rsrc_thread);
-		logger(first_child_fp, Info, posix_thread_id, kernel_thread_id, "First child thread started", "first_child_thread");
+		logger(first_child_fp, Info, posix_thread_id_first_child, kernel_thread_id_first_child, "First child thread started", "first_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		
 		FILE *new_fp;
@@ -186,10 +197,6 @@ void *thread_function(void *info)
 		char_occurrence(head);
 		destroy(head);
 		fclose(new_fp);
-		
-		pthread_mutex_lock(&rsrc_thread);
-		logger(first_child_fp, Info, posix_thread_id, kernel_thread_id, "First child thread exited", "first_child_thread");
-		pthread_mutex_unlock(&rsrc_thread);
 
 		return NULL;
 		
@@ -197,7 +204,6 @@ void *thread_function(void *info)
 	else if(child_thread_information->child_info ==  child_two)
 	{
 		printf("In second child thread \n"); 
-		unsigned int  posix_thread_id, kernel_thread_id;
 		 
 		posix_thread_id = pthread_self();
 		kernel_thread_id = syscall( __NR_gettid );
@@ -206,36 +212,35 @@ void *thread_function(void *info)
 		second_child_fp = fopen( child_thread_information-> file_name, "a" );
 		
 		pthread_mutex_lock(&rsrc_thread);
-		logger(second_child_fp, Info, posix_thread_id, kernel_thread_id, "Second child thread started", "second_child_thread");
+		logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, "Second child thread started", "second_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		
 		struct sigaction sa;
 		struct itimerval timer;
 		
-		 /* Install periodic_task  as the signal handler for SIGVTALRM. */
-		 memset (&sa, 0, sizeof (sa));
-		 sa.sa_handler = &second_child_signal_handler ;
-		 sigaction (SIGVTALRM, &sa, NULL);
-		 sigaction (SIGUSR1, &sa, NULL);
-		 sigaction (SIGUSR2, &sa, NULL);
+		/* Install periodic_task  as the signal handler for SIGVTALRM. */
+		memset (&sa, 0, sizeof (sa));
+		sa.sa_handler = &second_child_signal_handler ;
+		sigaction (SIGVTALRM, &sa, NULL);
+		sigaction (SIGUSR1, &sa, NULL);
+		sigaction (SIGUSR2, &sa, NULL);
+		sigaction (SIGINT, &sa, NULL);
 
-		 /* Configure the timer to expire after 100 msec... */
-		 timer.it_value.tv_sec = 0;
-		 timer.it_value.tv_usec = 100000;
+		/* Configure the timer to expire after 100 msec... */
+		timer.it_value.tv_sec = 0;
+		timer.it_value.tv_usec = 100000;
 
-		 /* ... and every 100 msec after that. */
-		 timer.it_interval.tv_sec = 0;
-		 timer.it_interval.tv_usec = 100000;
+		/* ... and every 100 msec after that. */
+		timer.it_interval.tv_sec = 0;
+		timer.it_interval.tv_usec = 100000;
 
-		 /* Start a virtual timer. It counts down whenever this process is    executing. */
-		 setitimer (ITIMER_VIRTUAL, &timer, NULL);
+		/* Start a virtual timer. It counts down whenever this process is    executing. */
+		setitimer (ITIMER_VIRTUAL, &timer, NULL);
 
-		 /* Do busy work. */
-		 while (1);
+		/* Do busy work. */
+		while (1);
 		
-		pthread_mutex_lock(&rsrc_thread);
-		logger(second_child_fp, Info, posix_thread_id, kernel_thread_id, "Second child thread exited", "second_child_thread");
-		pthread_mutex_unlock(&rsrc_thread);
+		
 
 		return NULL;
 	}	
@@ -252,7 +257,6 @@ int main(int argc, char *argv[])
 	int8_t status;
 	pthread_t first_child_thread, second_child_thread;
 	char output_file_name[100];
-	unsigned int posix_thread_id, kernel_thread_id;
 	
 	/* Set default protocol for mutex */
   	pthread_mutex_init(&rsrc_thread, NULL);
@@ -279,17 +283,18 @@ int main(int argc, char *argv[])
 	kernel_thread_id = syscall( __NR_gettid ); 
 	
 	pthread_mutex_lock(&rsrc_thread);
-	logger(master_fp, Info, posix_thread_id, kernel_thread_id, "Master thread started", "master_thread");
-	logger(master_fp, Info, posix_thread_id, kernel_thread_id, "Master thread creating child threads", "master_thread");
+	logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread started", "master_thread");
+	logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread creating child threads", "master_thread");
 	pthread_mutex_unlock(&rsrc_thread);
 	
 	struct sigaction sa_master;
 		
-	 /* Install periodic_task  as the signal handler for SIGVTALRM. */
-	 memset (&sa_master, 0, sizeof (sa_master));
-	 sa_master.sa_handler = &first_child_signal_handler ;
-	 sigaction (SIGUSR1, &sa_master, NULL);
-	 sigaction (SIGUSR2, &sa_master, NULL);
+	/* Install periodic_task  as the signal handler for SIGVTALRM. */
+	memset (&sa_master, 0, sizeof (sa_master));
+	sa_master.sa_handler = &first_child_signal_handler ;
+	sigaction (SIGUSR1, &sa_master, NULL);
+	sigaction (SIGUSR2, &sa_master, NULL);
+	sigaction (SIGINT, &sa_master, NULL);
 	
 	
 	/* Writing information to structure */
@@ -325,10 +330,6 @@ int main(int argc, char *argv[])
 	
 	if(pthread_mutex_destroy(&rsrc_thread) != 0)
 		perror("Error in mutex destroy\n");
-
-	pthread_mutex_lock(&rsrc_thread);
-	logger(master_fp, Info, posix_thread_id, kernel_thread_id, "Master thread exited", "master_thread");
-	pthread_mutex_unlock(&rsrc_thread);
 	
 	exit(1);
 	
