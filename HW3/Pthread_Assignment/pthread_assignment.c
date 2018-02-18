@@ -33,20 +33,6 @@
 #define PTHREAD_YEAR (1900)
 
 
-/***Global Structures ***/
-
-/*
-​* ​ ​ @brief   ​ : Structure for the thread info
-​*  ​ @contents : file_name -> input file name
-*               child_info -> child number   
-​*/
-typedef struct{
-	
-	char * file_name;
-	child_enum child_info;
-	
-}thread_info;
-
 /***Global enums ***/
 
 /*
@@ -72,6 +58,22 @@ typedef enum{
 	
 }child_enum;
 
+/***Global Structures ***/
+
+/*
+​* ​ ​ @brief   ​ : Structure for the thread info
+​*  ​ @contents : file_name -> input file name
+*               child_info -> child number   
+​*/
+typedef struct{
+	
+	char * file_name;
+	child_enum child_info;
+	
+}thread_info;
+
+
+
 /* Global variables */
 
 /* Mutex variable */
@@ -80,6 +82,7 @@ pthread_mutex_t rsrc_thread;
 int posix_thread_id_master, kernel_thread_id_master;
 int posix_thread_id_first_child, kernel_thread_id_first_child;
 int posix_thread_id_second_child, kernel_thread_id_second_child;
+pthread_t first_child_thread, second_child_thread;
 /* File pointers for each thread to open input file */
 FILE *first_child_fp;
 FILE *second_child_fp;
@@ -214,32 +217,10 @@ void second_child_signal_handler(int signum)
 		pthread_mutex_unlock(&rsrc_thread);
 		fclose(second_child_fp);
 		
-		pthread_exit(NULL);
+		pthread_cancel(second_child_thread);
 	}
 }
 
-/**
-​* ​ ​ @brief​ : Signal handler for master thread
-​* ​ ​
-​* ​ ​ Returns N/A
-​*
-*	@param​ ​ signum  ​ Signal number
-​*
-​* ​ ​ @return​ ​N/A
-​*/
-void master_signal_handler(int signum)
-{
-	/* Check for signal type */
-	if(signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGINT){
-		printf (" Received usr1/usr2/sigint signal for main thread \n");
-		
-		pthread_mutex_lock(&rsrc_thread);
-		logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread exited", "master_thread");
-		pthread_mutex_unlock(&rsrc_thread);
-		fclose(master_fp);
-		pthread_exit(NULL);
-	}
-}
 
 /**
 ​* ​ ​ @brief​ : Signal handler for first child thread
@@ -266,7 +247,7 @@ void first_child_signal_handler(int signum)
 		pthread_mutex_unlock(&rsrc_thread);
 		fclose(first_child_fp);
 		
-		pthread_exit(NULL);
+		pthread_cancel(first_child_thread);
 	}
 }
 
@@ -403,7 +384,7 @@ void *thread_function(void *info){
 int main(int argc, char *argv[])
 {
 	int8_t status;
-	pthread_t first_child_thread, second_child_thread;
+	
 	char output_file_name[PTHREAD_BUFFER];
 	
 	/* Set default protocol for mutex */
@@ -437,15 +418,6 @@ int main(int argc, char *argv[])
 	logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread creating child threads", "master_thread");
 	pthread_mutex_unlock(&rsrc_thread);
 	
-	struct sigaction sa_master;
-		
-	/* Registering signal actions for master thread */
-	memset (&sa_master, PTHREAD_NUM_ZERO, sizeof (sa_master));
-	sa_master.sa_handler = &first_child_signal_handler ;
-	sigaction (SIGUSR1, &sa_master, NULL);
-	sigaction (SIGUSR2, &sa_master, NULL);
-	sigaction (SIGINT, &sa_master, NULL);
-	
 	
 	/* Writing information to structure */
 	first_child_info.file_name =  output_file_name;
@@ -478,12 +450,13 @@ int main(int argc, char *argv[])
 	pthread_join(first_child_thread, NULL);
 	pthread_join(second_child_thread, NULL);
 	
-	if(pthread_mutex_destroy(&rsrc_thread) != PTHREAD_NUM_ZERO)
-		perror("Error in mutex destroy\n");
 
 	pthread_mutex_lock(&rsrc_thread);
 	logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread exited", "master_thread");
 	pthread_mutex_unlock(&rsrc_thread);
+
+	if(pthread_mutex_destroy(&rsrc_thread) != PTHREAD_NUM_ZERO)
+		perror("Error in mutex destroy\n");
 
 	fclose(master_fp);
 	

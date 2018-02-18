@@ -14,6 +14,7 @@ all: final_output
 clean:
 	-rm -f *.o *.d
 	-rm -f final_output
+	-rm -f output_file.txt
 
 final_output: pthread_assignment.o linked_list.o
 	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $^ -lm
