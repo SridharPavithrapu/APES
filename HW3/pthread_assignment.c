@@ -158,8 +158,8 @@ void *thread_function(void *info)
 	{
 		printf("In first child thread \n"); 
 		 
-		posix_thread_id = pthread_self();
-		kernel_thread_id = syscall( __NR_gettid );
+		posix_thread_id_first_child = pthread_self();
+		kernel_thread_id_first_child = syscall( __NR_gettid );
 		
 		struct sigaction sa_child_one;
 		
@@ -205,8 +205,8 @@ void *thread_function(void *info)
 	{
 		printf("In second child thread \n"); 
 		 
-		posix_thread_id = pthread_self();
-		kernel_thread_id = syscall( __NR_gettid );
+		posix_thread_id_second_child = pthread_self();
+		kernel_thread_id_second_child = syscall( __NR_gettid );
 		
 		
 		second_child_fp = fopen( child_thread_information-> file_name, "a" );
@@ -279,8 +279,8 @@ int main(int argc, char *argv[])
 	
 	master_fp = fopen( output_file_name , "a" );
 	
-	posix_thread_id = pthread_self();
-	kernel_thread_id = syscall( __NR_gettid ); 
+	posix_thread_id_master = pthread_self();
+	kernel_thread_id_master = syscall( __NR_gettid ); 
 	
 	pthread_mutex_lock(&rsrc_thread);
 	logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread started", "master_thread");
