@@ -1,0 +1,749 @@
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:Second child thread started 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305131 809 69611 4285978 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72167 69 15947 1077915 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78247 203 19119 1063254 3979 0 487 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78333 342 16622 1069742 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76382 193 17921 1075066 4648 0 454 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7368417 123 11821 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32597 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10348680
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6284
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 6
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5694092 2 3657316 2168 17355 35797 0 8119 1233849 0 739486
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305151 809 69622 4285983 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72170 69 15953 1077916 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78256 203 19119 1063254 3979 0 487 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78339 342 16624 1069744 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76385 193 17924 1075068 4648 0 454 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7369266 123 11821 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32597 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10357982
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6284
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 5
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5694437 2 3657588 2168 17355 35797 0 8119 1233904 0 739504
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305170 809 69635 4285990 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72174 69 15958 1077916 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78266 203 19119 1063254 3979 0 487 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78340 342 16629 1069747 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76389 193 17927 1075071 4648 0 454 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7370998 123 11821 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32598 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10361069
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6284
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 5
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5694775 2 3657858 2168 17355 35798 0 8119 1233935 0 739540
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305190 809 69646 4285996 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72179 69 15960 1077918 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78276 203 19119 1063254 3979 0 487 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78341 342 16636 1069749 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76392 193 17930 1075074 4648 0 454 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7371889 123 11821 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32598 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10370025
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 5
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5695168 2 3658142 2168 17355 35798 0 8119 1233986 0 739598
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305208 809 69660 4286003 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72181 69 15965 1077920 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78285 203 19119 1063254 3979 0 487 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78346 342 16640 1069750 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76394 193 17934 1075077 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7373483 123 11821 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32598 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10372955
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 5
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5695515 2 3658416 2169 17355 35798 0 8119 1234039 0 739617
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305228 809 69678 4286016 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72183 69 15973 1077924 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78294 203 19122 1063256 3979 0 487 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78352 342 16642 1069756 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76398 193 17940 1075079 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7375620 123 11821 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32598 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10380771
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5695938 2 3658743 2169 17355 35798 0 8119 1234109 0 739643
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305253 809 69696 4286028 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72185 69 15983 1077926 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78302 203 19125 1063259 3979 0 487 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78359 342 16644 1069760 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76405 193 17943 1075082 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7376597 123 11822 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32599 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10399568
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 4
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5696471 2 3659111 2169 17355 35799 0 8120 1234229 0 739686
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305276 809 69720 4286040 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72192 69 15988 1077929 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78309 203 19131 1063261 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78364 342 16650 1069764 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76410 193 17950 1075085 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7378860 123 11823 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32599 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10411209
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5697010 2 3659514 2169 17355 35799 0 8121 1234337 0 739713
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305294 809 69735 4286049 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72201 69 15990 1077929 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78311 203 19136 1063263 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78367 342 16654 1069767 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76414 193 17953 1075088 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7380722 123 11827 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32599 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10415537
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5697406 2 3659798 2169 17355 35799 0 8125 1234407 0 739751
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305308 809 69744 4286060 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72202 69 15994 1077934 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78316 203 19136 1063265 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78367 342 16659 1069772 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76423 193 17953 1075088 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7381988 123 11830 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32600 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10418601
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5697771 2 3660016 2169 17355 35800 0 8128 1234464 0 739837
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305329 809 69757 4286073 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72204 69 15999 1077938 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78323 203 19137 1063268 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78370 342 16665 1069774 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76431 193 17955 1075091 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7383571 123 11833 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32600 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10421466
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 4
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5698171 2 3660311 2169 17355 35800 0 8131 1234529 0 739874
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305349 809 69768 4286083 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72206 69 16005 1077941 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78332 203 19138 1063269 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78375 342 16667 1069778 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76435 193 17957 1075094 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7384575 123 11837 0 0 0 0 0 0 0 0 0 0 134 0 0 11692 0 0 0 16578 0 32600 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10429976
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 4
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5698553 2 3660588 2169 17355 35800 0 8135 1234604 0 739900
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305372 809 69781 4286090 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72207 69 16014 1077941 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78342 203 19138 1063269 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78379 342 16668 1069783 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76442 193 17959 1075096 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7385383 123 11840 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32601 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10446154
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 4
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5699051 2 3660887 2169 17356 35802 0 8138 1234709 0 739988
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305391 809 69795 4286096 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72210 69 16019 1077943 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78352 203 19139 1063269 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78383 342 16673 1069784 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76445 193 17963 1075099 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7386849 123 11843 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32601 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10453548
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5699470 2 3661194 2169 17356 35802 0 8141 1234782 0 740024
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305412 809 69807 4286106 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72215 69 16021 1077946 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78362 203 19139 1063269 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78386 342 16677 1069787 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76447 193 17968 1075102 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7388213 123 11847 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32601 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10456540
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 4
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5699848 2 3661480 2169 17356 35802 0 8145 1234832 0 740062
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305429 809 69817 4286116 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72217 69 16024 1077951 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78372 203 19139 1063269 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78390 342 16680 1069789 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76448 193 17973 1075106 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7389256 123 11850 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32601 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10462241
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 5
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:53 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5700209 2 3661741 2169 17356 35802 0 8148 1234879 0 740112
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305453 809 69830 4286120 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72222 69 16026 1077953 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78383 203 19139 1063269 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78397 342 16681 1069790 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76450 193 17981 1075106 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7389910 123 11853 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32602 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10476265
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5700627 2 3662063 2169 17356 35803 0 8151 1234951 0 740132
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305478 809 69844 4286127 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72227 69 16029 1077957 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78390 203 19142 1063271 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78408 342 16682 1069791 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76452 193 17990 1075107 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7390618 123 11857 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32602 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10492089
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5701080 2 3662400 2169 17356 35803 0 8155 1235047 0 740148
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305500 809 69857 4286135 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72228 69 16038 10779Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:first_child_thread TID:6279 Posix_ID:2398213888 Message:First child thread started 
+59 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78396 203 19143 1063273 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78419 342 16682 1069791 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76457 193 17992 1075111 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7391236 123 11860 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32602 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10510748
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 7
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5701574 2 3662727 2169 17356 35803 0 8158 1235134 0 740225
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305526 809 69878 4286150 16190 0 1497 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72236 69 16045 1077959 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78404 203 19146 1063277 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78422 342 16689 1069795 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76462 193 17996 1075117 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7393734 123 11865 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32602 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10515858
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5702203 2 3663143 2169 17356 35803 0 8163 1235230 0 740337
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305539 809 69879 4286177 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72237 69 16045 1077969 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78404 203 19147 1063286 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78432 342 16689 1069795 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76464 193 17997 1075125 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7393971 123 11868 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10516072
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5702432 2 3663301 2169 17356 35804 0 8166 1235252 0 740382
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305558 809 69882 4286200 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72242 69 16046 1077974 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78409 203 19148 1063290 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78439 342 16690 1069800 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76466 193 17997 1075134 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7394314 123 11871 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10516609
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5702673 2 3663492 2169 17356 35804 0 8169 1235293 0 740388
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305572 809 69884 4286227 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72253 69 16046 1077974 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78412 203 19149 1063297 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78439 342 16690 1069811 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76467 193 17997 1075143 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7394517 123 11874 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10516953
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5702853 2 3663636 2169 17356 35804 0 8172 1235316 0 740398
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305587 809 69884 4286254 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72257 69 16046 1077980 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78414 203 19150 1063304 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78445 342 16690 1069815 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76469 193 17997 1075152 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7394723 123 11877 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10517389
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5703033 2 3663784 2169 17356 35804 0 8175 1235335 0 740408
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305602 809 69886 4286277 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72258 69 16046 1077990 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78417 203 19151 1063310 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78455 342 16690 1069815 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76470 193 17998 1075161 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7394916 123 11880 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10517807
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:54 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5703201 2 3663923 2169 17356 35804 0 8178 1235355 0 740414
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305616 809 69887 4286301 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72259 69 16046 1077999 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78420 203 19152 1063316 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78465 342 16690 1069815 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76471 193 17998 1075169 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7395115 123 11883 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10518232
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 4
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5703376 2 3664065 2169 17356 35804 0 8181 1235379 0 740420
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305631 809 69888 4286325 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72260 69 16046 1078008 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78422 203 19153 1063323 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78475 342 16690 1069815 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76472 193 17998 1075178 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7395310 123 11885 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10518665
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5703542 2 3664203 2169 17356 35804 0 8183 1235399 0 740426
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305645 809 69890 4286350 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72260 69 16046 1078017 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78425 203 19155 1063329 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78485 342 16690 1069815 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76473 193 17998 1075187 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7395504 123 11887 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10519085
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5703714 2 3664348 2169 17356 35804 0 8185 1235418 0 740432
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305659 809 69891 4286374 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72261 69 16046 1078027 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78428 203 19155 1063335 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78495 342 16690 1069815 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76474 193 17998 1075196 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7395705 123 11890 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10519522
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 3
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5703893 2 3664497 2169 17356 35804 0 8188 1235439 0 740438
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305674 809 69892 4286397 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72262 69 16046 1078036 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78431 203 19157 1063341 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78505 342 16690 1069815 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76475 193 17998 1075204 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7395906 123 11892 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10519961
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5704110 2 3664643 2169 17356 35804 0 8190 1235462 0 740484
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu  305689 809 69893 4286421 16190 0 1498 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu0 72262 69 16046 1078045 4121 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu1 78434 203 19157 1063347 3979 0 488 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu2 78515 342 16690 1069815 3439 0 277 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:cpu3 76476 193 17998 1075213 4648 0 455 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:intr 7396111 123 11895 0 0 0 0 0 0 0 0 0 0 134 0 0 11694 0 0 0 16579 0 32603 46463 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:ctxt 10520375
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:btime 1518914449
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:processes 6285
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_running 2
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:procs_blocked 0
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:softirq 5704286 2 3664787 2169 17356 35804 0 8193 1235485 0 740490
+ 
+Date:17/02/2018 Time:20:58:55 Log_Type:Info Thread_Name:second_child_thread TID:6280 Posix_ID:2389821184 Message:Second child thread exited 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:master_thread TID:6278 Posix_ID:2406541056 Message:Master thread started 
+Date:17/02/2018 Time:20:58:52 Log_Type:Info Thread_Name:master_thread TID:6278 Posix_ID:2406541056 Message:Master thread creating child threads 

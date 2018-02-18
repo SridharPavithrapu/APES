@@ -42,8 +42,7 @@ FILE *first_child_fp;
 FILE *second_child_fp;
 FILE *master_fp;
 
-thread_info *first_child_info;
-thread_info *second_child_info;
+NODE *head = NULL;
 
 void logger(FILE* file_pointer, log_type type, unsigned int posix_thread_id, unsigned int kernel_thread_id, char * message, char * thread_name){
 	
@@ -88,13 +87,13 @@ NODE* char_occurrence(NODE* head_ptr){
 			
 			if(current->details.count == 3){
 				
-				printf("Character \"%c\" exceeded three times\n",current->details.alphabet);
+				printf("Character \"%c\" has occurred thice\n",current->details.alphabet);
 			}
 		   current = current->next;
 		}
 		if(current->details.count == 3){
 				
-				printf("Character \"%c\" exceeded three times\n",current->details.alphabet);
+				printf("Character \"%c\" has occurred thice\n",current->details.alphabet);
 			}
 	}
 	return head_ptr;
@@ -117,7 +116,6 @@ void second_child_signal_handler(int signum)
 			printf("Error opening file\n");
 		}
 		while ((read = getline(&line, &len, fp)) != -1) {
-			printf("line:%s\n",line);
 			pthread_mutex_lock(&rsrc_thread);
 			logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, line, "second_child_thread");
 			pthread_mutex_unlock(&rsrc_thread);
@@ -129,35 +127,42 @@ void second_child_signal_handler(int signum)
 		
 	}
 	else if(signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGINT){
-		printf (" Received usr1 or usr2 signal for second child thread \n");
+		printf (" Received usr1/usr2/sigint signal for second child thread \n");
 		pthread_mutex_lock(&rsrc_thread);
 		logger(second_child_fp, Info, posix_thread_id_second_child, kernel_thread_id_second_child, "Second child thread exited", "second_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		fclose(second_child_fp);
+		exit(0);
 	}
 }
 
 void master_signal_handler(int signum)
 {
 	if(signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGINT){
-		printf (" Received usr1 or usr2 signal for main thread \n");
+		printf (" Received usr1/usr2/sigint signal for main thread \n");
 		pthread_mutex_lock(&rsrc_thread);
 		logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread exited", "master_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		fclose(master_fp);
-		free(first_child_info);
-		free(second_child_info);
+		exit(0);
 	}
 }
 
 void first_child_signal_handler(int signum)
 {
 	if(signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGINT){
-		printf (" Received usr1 or usr2 signal for first child thread \n");
+		printf (" Received usr1/usr2/sigint signal for first child thread \n");
+		
+		if(head != NULL){
+
+			destroy(head);
+		}
+
 		pthread_mutex_lock(&rsrc_thread);
 		logger(first_child_fp, Info, posix_thread_id_first_child, kernel_thread_id_first_child, "First child thread exited", "first_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		fclose(first_child_fp);
+		exit(0);
 	}
 }
 
@@ -188,18 +193,18 @@ void *thread_function(void *info)
 		logger(first_child_fp, Info, posix_thread_id_first_child, kernel_thread_id_first_child, "First child thread started", "first_child_thread");
 		pthread_mutex_unlock(&rsrc_thread);
 		
-		FILE *new_fp;
-		new_fp = fopen("sample.txt","r");
+		FILE *text_file_fp;
+		text_file_fp = fopen("Valentinesday.txt","r");
 		
-		if(new_fp == NULL){
+		if(text_file_fp == NULL){
 			
 			printf("Error in reading file \n"); 
 			exit(0);
 		}
 		
 		char temp;
-		NODE *head = NULL;
-		while ((temp = fgetc(new_fp)) != EOF){
+		
+		while ((temp = fgetc(text_file_fp)) != EOF){
         		printf("read character:%c \n", temp);
 			if((temp>='A' && temp<='Z') || (temp>='a' && temp<='z')){
 				head = traverse(head,temp);
@@ -208,7 +213,7 @@ void *thread_function(void *info)
 		head = char_occurrence(head);
 		head = destroy(head);
 		printf("Destroyed all the nodes\n");
-		fclose(new_fp);
+		fclose(text_file_fp);
 		fclose(first_child_fp);
 
 		return NULL;
@@ -277,8 +282,8 @@ int main(int argc, char *argv[])
 	/* Set default protocol for mutex */
   	pthread_mutex_init(&rsrc_thread, NULL);
 	
-	first_child_info = malloc(sizeof(thread_info));
-	second_child_info = malloc(sizeof(thread_info));
+	thread_info first_child_info;
+	thread_info second_child_info;
 	
 	if(argc > 1)
 	{
@@ -314,16 +319,16 @@ int main(int argc, char *argv[])
 	
 	
 	/* Writing information to structure */
-	first_child_info->file_name =  output_file_name;
-	first_child_info->child_info = child_one;
+	first_child_info.file_name =  output_file_name;
+	first_child_info.child_info = child_one;
 	
-	second_child_info->file_name = output_file_name;
-	second_child_info->child_info = child_two;
+	second_child_info.file_name = output_file_name;
+	second_child_info.child_info = child_two;
 
 	printf("Started creating threads\n");
 	
 	/* Creating first child thread */
-	status = pthread_create(&first_child_thread, NULL, thread_function, (void *) first_child_info);
+	status = pthread_create(&first_child_thread, NULL, thread_function, (void *) &first_child_info);
 	if (status)
 	{
 		printf("ERROR; pthread_create() for first child thread with status is %d\n", status);
@@ -332,7 +337,7 @@ int main(int argc, char *argv[])
 	}
 	
 	/* Creating second child thread */
-	status = pthread_create(&second_child_thread, NULL, thread_function, (void *) second_child_info);
+	status = pthread_create(&second_child_thread, NULL, thread_function, (void *) &second_child_info);
     	if (status)
 	{
 		printf("ERROR; pthread_create() for second child thread with status is %d\n", status);
@@ -347,9 +352,11 @@ int main(int argc, char *argv[])
 	if(pthread_mutex_destroy(&rsrc_thread) != 0)
 		perror("Error in mutex destroy\n");
 
+	pthread_mutex_lock(&rsrc_thread);
+	logger(master_fp, Info, posix_thread_id_master, kernel_thread_id_master, "Master thread exited", "master_thread");
+	pthread_mutex_unlock(&rsrc_thread);
+
 	fclose(master_fp);
-	free(first_child_info);
-	free(second_child_info);
 	
 	exit(1);
 	

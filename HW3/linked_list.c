@@ -16,7 +16,6 @@ NODE* insert_at_beginning(NODE* head_ptr, char data){
 	/* Check for empty linked list */
 	if(head_ptr == NULL){
 		
-		//printf("Linked list is empty, so entering data in first node \n");
 		if(data>='A' && data<='Z'){
 			new_node->details.alphabet = data + 32;
 		}
@@ -30,7 +29,6 @@ NODE* insert_at_beginning(NODE* head_ptr, char data){
 	}
 	else{
 		
-		//printf("Inserting node at the first\n");
 		if(data>='A' && data<='Z'){
 			new_node->details.alphabet = data + 32;
 		}
@@ -80,11 +78,9 @@ NODE* traverse(NODE* head_ptr,char data){
 	}
 
 	if(head_ptr == NULL){
-		//printf("In traverse head pointer null\n");
 		head_ptr = insert_at_beginning(head_ptr, data);
 	}
 	else{
-		//printf("In traverse head pointer is not null\n");
 		NODE *current = head_ptr;
 		while (current != NULL) {	
 			printf("current->details.alphabet:%c, data:%c\n",current->details.alphabet,data);
@@ -99,7 +95,6 @@ NODE* traverse(NODE* head_ptr,char data){
 		
 		if(flag == 0){
 			
-			//printf("Inside flag 0 case\n");
 			head_ptr = insert_at_beginning(head_ptr, data);
 		}
 	}
