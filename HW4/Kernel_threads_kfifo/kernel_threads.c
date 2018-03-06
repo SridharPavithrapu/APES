@@ -25,7 +25,10 @@
 #include <linux/timer.h>
 #include <linux/kthread.h>  // for threads
 #include <linux/sched.h>  // for task_struct
-#include <linux/time.h>   // for using jiffies 
+#include <linux/time.h>   // for using jiffies
+#include <linux/proc_fs.h>
+#include <linux/mutex.h>
+#include <linux/kfifo.h> 
 
 
 /* Module description */
@@ -34,6 +37,10 @@ MODULE_AUTHOR("Sridhar Pavithrapu");
 MODULE_DESCRIPTION("A simple kernel module with demonstration of kernel threads with kfifo");
 MODULE_VERSION("1.0");
 
+/* fifo size in elements (bytes) */
+#define FIFO_SIZE	32
+
+static DECLARE_KFIFO(test, unsigned char, FIFO_SIZE);
 
 static struct task_struct *thread1;
 
@@ -54,12 +61,25 @@ int first_thread_fn(void * data) {
 
 	printk(KERN_INFO "In thread1");
 	
+	unsigned char	buf[6];
+	
+	/* put string into the fifo */
+	kfifo_in(&test, "hello", 5);
+	
+	/* show the number of used elements */
+	printk(KERN_INFO "fifo len: %u\n", kfifo_len(&test));
+	
 	return 0;
 }
 
 int second_thread_fn(void * data) {
 
 	printk(KERN_INFO "In thread2");
+	
+	unsigned char	buf[6];
+	/* get max of 5 bytes from the fifo */
+	char i = kfifo_out(&test, buf, 5);
+	printk(KERN_INFO "buf: %.*s\n", i, buf);
 
 	return 0;
 }
