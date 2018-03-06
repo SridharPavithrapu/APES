@@ -1,0 +1,1 @@
+cmd_/home/sridhar/APES/HW4/Kernel_threads_kfifo/kernel_threads.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/sridhar/APES/HW4/Kernel_threads_kfifo/kernel_threads.ko /home/sridhar/APES/HW4/Kernel_threads_kfifo/kernel_threads.o /home/sridhar/APES/HW4/Kernel_threads_kfifo/kernel_threads.mod.o ;  true

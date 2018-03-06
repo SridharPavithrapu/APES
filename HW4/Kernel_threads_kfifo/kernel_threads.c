@@ -50,14 +50,14 @@ static struct task_struct *thread2;
 ​ * ​ ​ @return​ : None
 ​**/
 
-int first_thread_fn() {
+int first_thread_fn(void * data) {
 
 	printk(KERN_INFO "In thread1");
 	
 	return 0;
 }
 
-int second_thread_fn() {
+int second_thread_fn(void * data) {
 
 	printk(KERN_INFO "In thread2");
 
