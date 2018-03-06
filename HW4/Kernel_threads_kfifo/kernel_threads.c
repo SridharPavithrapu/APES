@@ -27,7 +27,7 @@
 #include <linux/sched.h>  // for task_struct
 #include <linux/time.h>   // for using jiffies
 #include <linux/proc_fs.h>
-#include <linux/mutex.h>
+#include <linux/rwsem.h>
 #include <linux/kfifo.h> 
 
 
@@ -36,12 +36,13 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Sridhar Pavithrapu");
 MODULE_DESCRIPTION("A simple kernel module with demonstration of kernel threads with kfifo");
 MODULE_VERSION("1.0");
+MODULE_INFO(vermagic, "4.14.15 SMP mod_unload ");
 
 /* fifo size in elements (bytes) */
 #define FIFO_SIZE	32
 
 static DECLARE_KFIFO(test, unsigned char, FIFO_SIZE);
-DEFINE_MUTEX(fifo_lock);
+static DECLARE_RWSEM(list_lock);
 struct timer_list g_timer;
 static unsigned int time_interval = 500;
 
@@ -70,15 +71,13 @@ static struct task_struct *thread2;
 
 void timer_handler(unsigned long data){
 	
-	int rv = mutex_lock_interruptible(&list_lock);
-    if(rv != 0) {
-        return;
-    }
+	down_write(&list_lock);
+    
 	
 	/* put string into the fifo */
 	kfifo_in(&test, "hello", 5);
 	
-	mutex_unlock(&list_lock);
+	up_write(&list_lock);
     	
 	/* Restarting the timer */
     mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
@@ -87,6 +86,7 @@ void timer_handler(unsigned long data){
 
 int first_thread_fn(void * data) {
 
+	int status;
 	printk(KERN_INFO "Start of thread1");
 	
 	
@@ -119,15 +119,13 @@ int second_thread_fn(void * data) {
 
 	while(!kthread_should_stop()){
 	
-		int rv = mutex_lock_interruptible(&list_lock);
-		if(rv != 0) {
-			return;
-		}
+		down_read(&list_lock);
+		
 		/* get max of 5 bytes from the fifo */
 		i = kfifo_out(&test, buf, 5);
 		printk(KERN_INFO "buf: %.*s\n", i, buf);
 		
-		mutex_unlock(&list_lock);
+		up_read(&list_lock);
 	}
 
 	printk(KERN_INFO "End of thread2");
