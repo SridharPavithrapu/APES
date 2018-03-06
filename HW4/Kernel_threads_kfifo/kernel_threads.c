@@ -101,6 +101,8 @@ static int __init thread_init(void){
 	
 	printk(KERN_INFO "In thread_init function");
 	
+	INIT_KFIFO(test);
+	
 	thread1 = kthread_create(first_thread_fn,NULL,first_thread_name);
 	if((thread1))
 	{
