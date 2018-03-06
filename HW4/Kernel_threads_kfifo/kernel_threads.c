@@ -59,13 +59,17 @@ static struct task_struct *thread2;
 
 int first_thread_fn(void * data) {
 
-	printk(KERN_INFO "In thread1");
+	printk(KERN_INFO "Start of thread1");
 	
 	/* put string into the fifo */
 	kfifo_in(&test, "hello", 5);
 	
 	/* show the number of used elements */
 	printk(KERN_INFO "fifo len: %u\n", kfifo_len(&test));
+
+	while(!kthread_should_stop());
+
+	printk(KERN_INFO "End of thread1");
 	
 	do_exit(0);
 	return 0;
@@ -75,12 +79,16 @@ int second_thread_fn(void * data) {
 	unsigned char buf[6];
 	unsigned char i;
 
-	printk(KERN_INFO "In thread2");
+	printk(KERN_INFO "Start of thread2");
 	
 	
 	/* get max of 5 bytes from the fifo */
 	i = kfifo_out(&test, buf, 5);
 	printk(KERN_INFO "buf: %.*s\n", i, buf);
+
+	while(!kthread_should_stop());
+
+	printk(KERN_INFO "End of thread2");
 
 	do_exit(0);
 	return 0;
