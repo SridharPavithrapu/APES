@@ -41,6 +41,9 @@ MODULE_VERSION("1.0");
 #define FIFO_SIZE	32
 
 static DECLARE_KFIFO(test, unsigned char, FIFO_SIZE);
+DEFINE_MUTEX(fifo_lock);
+struct timer_list g_timer;
+static unsigned int time_interval = 500;
 
 static struct task_struct *thread1;
 
@@ -57,16 +60,47 @@ static struct task_struct *thread2;
 ​ * ​ ​ @return​ : None
 ​**/
 
-int first_thread_fn(void * data) {
+/**
+​ * ​ ​ @brief​ : Timer handler for printing the timer count and name.
+ *
+ * ​ ​ @param​ ​: data for any arguments passed 
+​ *
+​ * ​ ​ @return​ : None
+​**/
 
-	printk(KERN_INFO "Start of thread1");
+void timer_handler(unsigned long data){
+	
+	int rv = mutex_lock_interruptible(&list_lock);
+    if(rv != 0) {
+        return;
+    }
 	
 	/* put string into the fifo */
 	kfifo_in(&test, "hello", 5);
 	
+	mutex_unlock(&list_lock);
+    	
+	/* Restarting the timer */
+    mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
+ 
+}
+
+int first_thread_fn(void * data) {
+
+	printk(KERN_INFO "Start of thread1");
+	
+	
+	
 	/* show the number of used elements */
 	printk(KERN_INFO "fifo len: %u\n", kfifo_len(&test));
 
+	/*Starting the timer.*/
+    setup_timer(&g_timer, timer_handler, 0);
+    status = mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
+	if(status){
+		printk(KERN_INFO "Error in mod_timer");
+	}
+	
 	while(!kthread_should_stop());
 
 	printk(KERN_INFO "End of thread1");
@@ -82,11 +116,19 @@ int second_thread_fn(void * data) {
 	printk(KERN_INFO "Start of thread2");
 	
 	
-	/* get max of 5 bytes from the fifo */
-	i = kfifo_out(&test, buf, 5);
-	printk(KERN_INFO "buf: %.*s\n", i, buf);
 
-	while(!kthread_should_stop());
+	while(!kthread_should_stop()){
+	
+		int rv = mutex_lock_interruptible(&list_lock);
+		if(rv != 0) {
+			return;
+		}
+		/* get max of 5 bytes from the fifo */
+		i = kfifo_out(&test, buf, 5);
+		printk(KERN_INFO "buf: %.*s\n", i, buf);
+		
+		mutex_unlock(&list_lock);
+	}
 
 	printk(KERN_INFO "End of thread2");
 
