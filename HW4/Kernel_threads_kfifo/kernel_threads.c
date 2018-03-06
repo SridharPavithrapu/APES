@@ -61,26 +61,28 @@ int first_thread_fn(void * data) {
 
 	printk(KERN_INFO "In thread1");
 	
-	unsigned char	buf[6];
-	
 	/* put string into the fifo */
 	kfifo_in(&test, "hello", 5);
 	
 	/* show the number of used elements */
 	printk(KERN_INFO "fifo len: %u\n", kfifo_len(&test));
 	
+	do_exit(0);
 	return 0;
 }
 
 int second_thread_fn(void * data) {
+	unsigned char buf[6];
+	unsigned char i;
 
 	printk(KERN_INFO "In thread2");
 	
-	unsigned char	buf[6];
+	
 	/* get max of 5 bytes from the fifo */
-	char i = kfifo_out(&test, buf, 5);
+	i = kfifo_out(&test, buf, 5);
 	printk(KERN_INFO "buf: %.*s\n", i, buf);
 
+	do_exit(0);
 	return 0;
 }
 
@@ -130,10 +132,14 @@ static void __exit thread_exit(void){
 	ret = kthread_stop(thread1);
 	if(!ret)
 		printk(KERN_INFO "First thread stopped");
+		thread1 = NULL;
 	
 	ret = kthread_stop(thread2);
 	if(!ret)
 		printk(KERN_INFO "Second thread stopped");
+		thread2 = NULL;
+
+	kfifo_free(&test);
 }
 
 module_init(thread_init);
