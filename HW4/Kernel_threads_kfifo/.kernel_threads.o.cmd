@@ -832,6 +832,56 @@ deps_/home/sridhar/APES/HW4/Kernel_threads_kfifo/kernel_threads.o := \
   include/linux/vm_event_item.h \
     $(wildcard include/config/memory/balloon.h) \
     $(wildcard include/config/balloon/compaction.h) \
+  include/linux/delay.h \
+  arch/x86/include/asm/delay.h \
+  include/asm-generic/delay.h \
+  include/linux/irq.h \
+    $(wildcard include/config/generic/irq/effective/aff/mask.h) \
+    $(wildcard include/config/generic/irq/ipi.h) \
+    $(wildcard include/config/irq/domain/hierarchy.h) \
+    $(wildcard include/config/generic/irq/migration.h) \
+    $(wildcard include/config/generic/pending/irq.h) \
+    $(wildcard include/config/hardirqs/sw/resend.h) \
+    $(wildcard include/config/generic/irq/legacy/alloc/hwirq.h) \
+    $(wildcard include/config/generic/irq/legacy.h) \
+  include/linux/irqhandler.h \
+  include/linux/irqreturn.h \
+  include/linux/irqnr.h \
+  include/uapi/linux/irqnr.h \
+  include/linux/io.h \
+  include/linux/slab.h \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
+    $(wildcard include/config/slab.h) \
+    $(wildcard include/config/slub.h) \
+  include/linux/kmemleak.h \
+  include/linux/kasan.h \
+  arch/x86/include/asm/irq.h \
+  arch/x86/include/asm/irq_regs.h \
+  include/linux/irqdesc.h \
+    $(wildcard include/config/irq/preflow/fasteoi.h) \
+    $(wildcard include/config/generic/irq/debugfs.h) \
+    $(wildcard include/config/sparse/irq.h) \
+    $(wildcard include/config/handle/domain/irq.h) \
+  arch/x86/include/asm/hw_irq.h \
+    $(wildcard include/config/hpet/timer.h) \
+    $(wildcard include/config/dmar/table.h) \
+    $(wildcard include/config/ht/irq.h) \
+    $(wildcard include/config/x86/uv.h) \
+    $(wildcard include/config/vmd.h) \
+  include/linux/profile.h \
+    $(wildcard include/config/profiling.h) \
+  arch/x86/include/asm/sections.h \
+  include/asm-generic/sections.h \
+  arch/x86/include/asm/extable.h \
+  include/linux/clk.h \
+    $(wildcard include/config/common/clk.h) \
+    $(wildcard include/config/have/clk/prepare.h) \
+    $(wildcard include/config/have/clk.h) \
+    $(wildcard include/config/of.h) \
+  include/linux/rtmutex.h \
+    $(wildcard include/config/debug/rt/mutexes.h) \
 
 /home/sridhar/APES/HW4/Kernel_threads_kfifo/kernel_threads.o: $(deps_/home/sridhar/APES/HW4/Kernel_threads_kfifo/kernel_threads.o)
 
