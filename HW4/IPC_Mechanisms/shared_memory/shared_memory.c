@@ -5,10 +5,14 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <semaphore.h>
+#include <sys/shm.h>
+#include <sys/mman.h>
 #include <fcntl.h>           /* For O_* constants */
 #include <sys/stat.h>        /* For mode constants */
 #include <mqueue.h>
 #include <errno.h>
+
 
 
 #define SHARED_MEMORY_PERMISSIONS 0666
@@ -47,20 +51,13 @@ void  child_process(void)
 	/* Memory mapping the shared memory object */
 	sm_ptr = mmap(0, sizeof(receive_message), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
 	
-	char send_buffer[BUFFER_SIZE] = {0}; 
-	mqd_t mq2;
-	
-	mq2 = mq_open(QUEUE_NAME,O_RDWR | O_CREAT, QUEUE_PERMISSIONS, NULL);
-	if(mq2 == -1) {
-		
-		printf("Error in opening message_queue\n");
-		exit(1);
-	}
-	
 	sem_wait(&mutex);
-	strncpy((char *)&receive_message, (char *)ptr, sizeof(receive_message));
+	printf("Reading data\n");
+	memcpy((char *)&receive_message, sm_ptr, sizeof(receive_message));
+	msync(sm_ptr,sizeof(receive_message),MS_SYNC);
 	sem_post(&mutex);
 	
+
 	char output_buffer[BUFFER_SIZE] = {0};
 	strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
 	printf("\nString received from parent process:%s\n",output_buffer);
@@ -70,16 +67,18 @@ void  child_process(void)
 	message sent_message;
 	char send_buffer[BUFFER_SIZE] = {0}; 
 	
-	/* Sending acknowledgment to parent process */
+	/* Sending acknowledgment to parent process */ 
 	sprintf(send_buffer, "Switch status changed to %d",receive_message.switch_status);
 	strncpy(sent_message.info.string , send_buffer, strlen(send_buffer));
 	sent_message.info.string_length = strlen(send_buffer);
 	sent_message.switch_status = receive_message.switch_status;
 
 	sem_wait(&mutex);
-	sprintf(sm_ptr, "%s", &sent_message);
+	memcpy(sm_ptr, (char *)&sent_message , sizeof(sent_message));
+	msync(sm_ptr,sizeof(sent_message),MS_SYNC);
 	sem_post(&mutex);
 
+	//shm_unlink(sm_name);
 	printf("End of the child process \n");
 	
 }
@@ -116,13 +115,15 @@ void  parent_process(void)
 	sample_message.switch_status = true;	
 	
 	sem_wait(&mutex);
-	sprintf(sm_ptr, "%s", &sample_message);
+	memcpy(sm_ptr, (char *)&sample_message, sizeof(sample_message));
+	msync(sm_ptr,sizeof(sample_message),MS_SYNC);
 	sem_post(&mutex);
-	
+	sleep(0.5);
 	message receive_message;
 
 	sem_wait(&mutex);
-	strncpy((char *)&receive_message, (char *)ptr, sizeof(receive_message));
+	memcpy((char *)&receive_message,sm_ptr, sizeof(receive_message));
+	msync(sm_ptr,sizeof(receive_message),MS_SYNC);
 	sem_post(&mutex);
 	
 	char output_buffer[BUFFER_SIZE] = {0};
@@ -132,8 +133,9 @@ void  parent_process(void)
 	printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
 
 	
-	
+	//shm_unlink(sm_name);
 	printf("End of the parent process \n");
+	
 }
 
 int  main(void)

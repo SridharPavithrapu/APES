@@ -16,7 +16,7 @@ clean:
 	-rm -f shared_memory
 
 shared_memory: shared_memory.o
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $^ -lrt
+	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $^ -lrt -pthread
 
 depend:
 
