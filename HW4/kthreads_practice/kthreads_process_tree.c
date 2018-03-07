@@ -46,29 +46,32 @@ extern struct task_struct init_task;
 ​**/
 
 static int process_metrics(void *data){
-	
-	printk(KERN_INFO "Starting process tree metrics \n");
-	
+
 	struct list_head *list_node;
+	struct task_struct *node_temp;
 	int count = 0;
+	
+	printk(KERN_INFO "Starting process tree metrics \n\n");
+	
+	node_temp = current;
     
 	/* Starting process tree metrics */
 	while(!kthread_should_stop()){
 		
-		printk(KERN_INFO "Thread Name:%s \n", current->comm);
-		printk(KERN_INFO "Process Id:%d \n", current->pid);
-		printk(KERN_INFO "Process Status:%d \n", current->state);
+		printk(KERN_INFO "\nThread Name:%s \n", node_temp->comm);
+		printk(KERN_INFO "Process Id:%d \n", node_temp->pid);
+		printk(KERN_INFO "Process Status:%d \n", node_temp->state);
 		
-		list_for_each(list_node, &current->children)
+		list_for_each(list_node, &node_temp->children)
 		{
 			count++;
 		}
 		printk(KERN_INFO "Number of children's in the process tree:%d \n", count);
 		count=0;
                 
-		printk(KERN_INFO "Nice Values:%d\n\n", (current->rt_priority - 120));	
-		if(current != &init_task){
-			current = current->parent;
+		printk(KERN_INFO "Nice Values:%d\n\n", (node_temp->rt_priority));	
+		if(node_temp != &init_task){
+			node_temp = node_temp->parent;
 		}
 		else{
 			break;
@@ -76,6 +79,7 @@ static int process_metrics(void *data){
 	}
 	printk(KERN_INFO "End of process tree metrics \n");
 	
+	thread1 = NULL;
 	do_exit(0);
 	return 0;
 }
@@ -118,9 +122,10 @@ static __exit void thread_clean_process_traverse(void){
 	
 	printk(KERN_INFO "Unloading the kernel module.\n");
 	/* Error check for thread one */
-	if (!IS_ERR(thread1)){
+	if (thread1){
 		
 		kthread_stop(thread1);
+		thread1 = NULL;
 		printk(KERN_INFO "First thread stopped.\n");
 	}
 	else

@@ -1,0 +1,1 @@
+cmd_/home/sridhar/APES/HW4/kthreads_practice/kthreads_process_tree.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/sridhar/APES/HW4/kthreads_practice/kthreads_process_tree.ko /home/sridhar/APES/HW4/kthreads_practice/kthreads_process_tree.o /home/sridhar/APES/HW4/kthreads_practice/kthreads_process_tree.mod.o ;  true

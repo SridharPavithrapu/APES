@@ -73,18 +73,19 @@ void  child_process(void)
 	if(return_value > 0 )
 	{
 		char output_buffer[BUFFER_SIZE] = {0};
-		strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+		strncpy(output_buffer, receive_message.string_message.string, receive_message.string_message.string_length);
 		printf("\nString received from parent process:%s\n",output_buffer);
-		printf("String length received from parent process:%d\n",receive_message.info.string_length);
+		printf("String length received from parent process:%d\n",receive_message.string_message.string_length);
 		printf("Switch status received from parent process:%d\n\n",receive_message.switch_status);
 		fflush(stdout);
 		
 		bzero(&sent_message, sizeof(sent_message));
 		
 		/* Sending acknowledgment to parent process */
+		char send_buffer[BUFFER_SIZE]={0};
 		sprintf(send_buffer, "Switch status changed to %d",receive_message.switch_status);
-		strncpy(sent_message.info.string , send_buffer, strlen(send_buffer));
-		sent_message.info.string_length = strlen(send_buffer);
+		strncpy(sent_message.string_message.string , send_buffer, strlen(send_buffer));
+		sent_message.string_message.string_length = strlen(send_buffer);
 		sent_message.switch_status = receive_message.switch_status;
 		
 		return_value = write(sockfd_child,  &sent_message, sizeof(sent_message));
@@ -113,7 +114,7 @@ void  parent_process(void)
 	int return_value;
 
 	bzero(&sample_message, sizeof(sample_message));
-	bzero(buffer, sizeof(buffer));
+	
 
 	sockfd_parent = socket(AF_UNIX, SOCK_STREAM, 0);          
 	if (sockfd_parent < 0)
@@ -126,12 +127,12 @@ void  parent_process(void)
 
 	socklen_t sockaddr_size = sizeof(struct sockaddr_un);
 	return_value = connect(sockfd_parent, (struct sockaddr *)&server, sockaddr_size);    
-	perror("Return value:%d \n",return_value);
+	printf("Return value:%d \n",return_value);
 
 	strncpy(send_buffer, "Sending message for switch status", strlen("Sending message for switch status"));
 
-	strncpy(sample_message.info.string , send_buffer, strlen(send_buffer));
-	sample_message.info.string_length = strlen(send_buffer);
+	strncpy(sample_message.string_message.string , send_buffer, strlen(send_buffer));
+	sample_message.string_message.string_length = strlen(send_buffer);
 	sample_message.switch_status = true;
 	
 	/* Check for connection */
@@ -141,13 +142,13 @@ void  parent_process(void)
 		if(return_value > 0)
 		{
 			bzero(&receive_message, sizeof(receive_message));
-			return_value = read(sockfd_parent, &receive_message, STRUCT_SIZE);
+			return_value = read(sockfd_parent, &receive_message, sizeof(receive_message));
 			if(return_value>0)
 			{
 				char output_buffer[BUFFER_SIZE] = {0};
-				strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+				strncpy(output_buffer, receive_message.string_message.string, receive_message.string_message.string_length);
 				printf("\nString received from child process:%s\n",output_buffer);
-				printf("String length received from child process:%d\n",receive_message.info.string_length);
+				printf("String length received from child process:%d\n",receive_message.string_message.string_length);
 				printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
 				fflush(stdout);
 			}

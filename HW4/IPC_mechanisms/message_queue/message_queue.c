@@ -65,7 +65,7 @@ void  child_process(void)
 	message receive_message;
 	message sent_message;
 	struct mq_attr *attr1;
-	mq_getattr(mq2,attr1);
+	
 	
 	mq2 = mq_open(QUEUE_NAME,O_RDWR | O_CREAT, QUEUE_PERMISSIONS, NULL);
 	if(mq2 == -1) {
@@ -75,6 +75,7 @@ void  child_process(void)
 	}
 	
 	attr1 = malloc(sizeof(struct mq_attr));
+	mq_getattr(mq2,attr1);
 	
 	/* Receiving message on message queue */
 	if( mq_receive(mq2,(char *)&receive_message,attr1->mq_msgsize,NULL) == -1){

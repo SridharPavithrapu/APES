@@ -89,11 +89,11 @@ int first_thread_fn(void * data) {
 		/* Getting the next task information */
 		next_task=list_entry(task->tasks.next, struct task_struct, tasks);
 
-		sprintf(buffer, "\tCurrent Task Information:\n Name: %s\nPID: %d\nvruntime: %llu\n\n\n\n", (task->comm), (task->pid), task->se.vruntime);
+		sprintf(buffer, "\nCurrent Task Information:\n Name: %s\nPID: %d\nvruntime: %llu \n\n", (task->comm), (task->pid), task->se.vruntime);
  
-		sprintf(buffer, "%s\tPrevious Task Information:\n Name: %s\nPID: %d\nvruntime: %llu\n\n\n\n", buffer, (previous_task->comm), (previous_task->pid), previous_task->se.vruntime);
+		sprintf(buffer, "%s\nPrevious Task Information:\n Name: %s\nPID: %d\nvruntime: %llu \n\n", buffer, (previous_task->comm), (previous_task->pid), previous_task->se.vruntime);
 
-	    sprintf(buffer, "%s\tNext Task Information:\n Name: %s\nPID: %d\nvruntime: %llu\n\n\n\n", buffer, (next_task->comm), (next_task->pid), next_task->se.vruntime);
+	    sprintf(buffer, "%s\nNext Task Information:\n Name: %s \nPID: %d\nvruntime: %llu \n\n", buffer, (next_task->comm), (next_task->pid), next_task->se.vruntime);
 
 
 		/* Writing data to kernel fifo */
@@ -122,7 +122,6 @@ int first_thread_fn(void * data) {
 
 int second_thread_fn(void * data) {
 	unsigned char buffer[BUFFER_SIZE];
-	unsigned char c;
 
 	printk(KERN_INFO "Start of thread2");
 
