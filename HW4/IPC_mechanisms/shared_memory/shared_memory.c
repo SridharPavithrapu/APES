@@ -109,7 +109,6 @@ void  child_process(void)
 	msync(sm_ptr,sizeof(sent_message),MS_SYNC);
 	sem_post(&mutex);
 
-	//shm_unlink(sm_name);
 	printf("End of the child process \n");
 	
 }
@@ -174,7 +173,7 @@ void  parent_process(void)
 	printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
 
 	
-	//shm_unlink(sm_name);
+	shm_unlink(sm_name);
 	printf("End of the parent process \n");
 	
 }
