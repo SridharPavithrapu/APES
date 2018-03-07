@@ -1,3 +1,21 @@
+/***************************************************************************** 
+* Copyright (C) 2018 by Sridhar Pavithrapu 
+* Redistribution, modification or use of this software in source or binary 
+* forms is permitted as long as the files maintain this copyright. Users are 
+* permitted to modify this and use it to learn about kernel timers.
+* Sridhar Pavithrapu and the University of Colorado are not liable for 
+* any misuse of this material.  
+*****************************************************************************/ 
+
+
+/** 
+* @file shared_memory.c 
+* @brief  Includes function declarations for understanding shared memory.
+* @author Sridhar Pavithrapu 
+* @date March 6 2018 
+**/
+
+/* Headers Section */
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
@@ -8,27 +26,39 @@
 #include <semaphore.h>
 #include <sys/shm.h>
 #include <sys/mman.h>
-#include <fcntl.h>           /* For O_* constants */
-#include <sys/stat.h>        /* For mode constants */
+#include <fcntl.h>           
+#include <sys/stat.h>        
 #include <mqueue.h>
 #include <errno.h>
 
 
-
+/* Macros declaration */
 #define SHARED_MEMORY_PERMISSIONS 0666
 #define BUFFER_SIZE 1024
 
+/* Global structures */
+/* Structure for storing string and its length */
 typedef struct {
 	char string[BUFFER_SIZE];
     	int string_length;
 } string_info;
 
+/* Structure for storing the string and switch status */
 typedef struct {
 	string_info info;
     	bool switch_status;
 } message;
 
+/* Declaring semaphore */
 sem_t mutex;
+
+/**
+​ * ​ ​ @brief​ : process function for child process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
 
 void  child_process(void)
 {
@@ -52,7 +82,7 @@ void  child_process(void)
 	sm_ptr = mmap(0, sizeof(receive_message), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
 	
 	sem_wait(&mutex);
-	printf("Reading data\n");
+	/* Receiving message on shared memory */
 	memcpy((char *)&receive_message, sm_ptr, sizeof(receive_message));
 	msync(sm_ptr,sizeof(receive_message),MS_SYNC);
 	sem_post(&mutex);
@@ -74,6 +104,7 @@ void  child_process(void)
 	sent_message.switch_status = receive_message.switch_status;
 
 	sem_wait(&mutex);
+	/* Sending message on shared memory */
 	memcpy(sm_ptr, (char *)&sent_message , sizeof(sent_message));
 	msync(sm_ptr,sizeof(sent_message),MS_SYNC);
 	sem_post(&mutex);
@@ -82,6 +113,14 @@ void  child_process(void)
 	printf("End of the child process \n");
 	
 }
+
+/**
+​ * ​ ​ @brief​ : process function for parent process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
 
 void  parent_process(void)
 {
@@ -115,6 +154,7 @@ void  parent_process(void)
 	sample_message.switch_status = true;	
 	
 	sem_wait(&mutex);
+	/* Sending message on shared memory */
 	memcpy(sm_ptr, (char *)&sample_message, sizeof(sample_message));
 	msync(sm_ptr,sizeof(sample_message),MS_SYNC);
 	sem_post(&mutex);
@@ -122,6 +162,7 @@ void  parent_process(void)
 	message receive_message;
 
 	sem_wait(&mutex);
+	/* Receiving message on shared memory */
 	memcpy((char *)&receive_message,sm_ptr, sizeof(receive_message));
 	msync(sm_ptr,sizeof(receive_message),MS_SYNC);
 	sem_post(&mutex);
@@ -138,23 +179,33 @@ void  parent_process(void)
 	
 }
 
+/**
+​ * ​ ​ @brief​ : Main function for spawning  processes.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : int (status)
+​**/
+
 int  main(void)
 {
 	pid_t  pid;
 	
-	/* create, initialize semaphore */
+	/* create and  initialize semaphore */
 	if( sem_init(&mutex,1,1) < 0){
 		
 	  perror("semaphore initilization");
 	  exit(0);
 	}
 
+	/* Creating the processes */
 	pid = fork();
 	if (pid != 0) 
 	  child_process();
 	else 
 	  parent_process();
   
+	/* Destroying the semaphore */
 	sem_destroy(&mutex);
 	return 0;
 }

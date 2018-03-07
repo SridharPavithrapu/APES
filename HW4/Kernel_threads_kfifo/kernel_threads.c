@@ -10,10 +10,9 @@
 
 /** 
 * @file kernel_threads.c 
-* @brief  Includes function declartions for creating kernel module 
-*	along with kernel timer. 
+* @brief  Includes function declarations processes communicationg using kfifo.
 * @author Sridhar Pavithrapu 
-* @date January 28 2018 
+* @date March 6 2018 
 **/
 
 /* Headers Section */
@@ -22,9 +21,9 @@
 #include <linux/init.h>
 #include <linux/stat.h>
 #include <linux/timer.h>
-#include <linux/kthread.h>  // for threads
-#include <linux/sched.h>  // for task_struct
-#include <linux/time.h>   // for using jiffies
+#include <linux/kthread.h>  
+#include <linux/sched.h>  
+#include <linux/time.h>   
 #include <linux/proc_fs.h>
 #include <linux/kfifo.h>
 #include <linux/hrtimer.h>
@@ -34,8 +33,7 @@
 #include <linux/clk.h>
 #include <linux/list.h>
 #include <linux/rtmutex.h>
-#include <linux/hrtimer.h>
-#include <linux/delay.h>
+#include <linux/string.h>
 
 
 /* Module description */
@@ -45,116 +43,109 @@ MODULE_DESCRIPTION("A simple kernel module with demonstration of kernel threads 
 MODULE_VERSION("1.0");
 MODULE_INFO(vermagic, "4.14.15 SMP mod_unload ");
 
-/* fifo size in elements (bytes) */
-#define FIFO_SIZE	32
+/* Macros declaration */
+/* Fifo size in elements (bytes) */
+#define FIFO_SIZE	2048
+#define BUFFER_SIZE 200
+#define TIMER_VALUE 1000000
+#define NAME_BUFFER 8
+#define KFIFO_NUM_ZERO 0
 
+
+/* Global variables */
 static DECLARE_KFIFO(test, unsigned char, FIFO_SIZE);
-static DECLARE_RWSEM(list_lock);
-struct timer_list g_timer;
-//static unsigned int time_interval = 500;
-
 static struct task_struct *thread1;
-
 static struct task_struct *thread2;
 
 
 /*** Function Definitions ***/
 
 /**
-​ * ​ ​ @brief​ : Timer handler for printing the timer count and name.
+​ * ​ ​ @brief​ : Thread function for first thread.
  *
  * ​ ​ @param​ ​: data for any arguments passed 
 ​ *
-​ * ​ ​ @return​ : None
+​ * ​ ​ @return​ : int (status of the thread exit)
 ​**/
-
-/**
-​ * ​ ​ @brief​ : Timer handler for printing the timer count and name.
- *
- * ​ ​ @param​ ​: data for any arguments passed 
-​ *
-​ * ​ ​ @return​ : None
-​**/
-
-/*void timer_handler(unsigned long data){
-	
-	
-	//down_write(&list_lock);
-	  
-	kfifo_in(&test, "hello", 5);
-	//up_write(&list_lock);
-	
-    	
-	
-    mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
- 
-}*/
 
 int first_thread_fn(void * data) {
-
-	//int status;
 	
-	
-
-	/*Starting the timer.*/
-    /*setup_timer(&g_timer, timer_handler, 0);
-    status = mod_timer( &g_timer, jiffies + msecs_to_jiffies(time_interval));
-	if(status){
-		printk(KERN_INFO "Error in mod_timer");
-	}*/
-	
-	
+	char buffer[BUFFER_SIZE];
+	struct task_struct *task, *previous_task, *next_task;		
 	ktime_t timeout = ktime_get();
+	
 	printk(KERN_INFO "Start of thread1");
+	
 	while(!kthread_should_stop()){
 
-		kfifo_put(&test, 'h');
-		kfifo_put(&test, 'e');
-		kfifo_put(&test, 'l');
-		kfifo_put(&test, 'l');
-		kfifo_put(&test, 'o');
+		memset(buffer, KFIFO_NUM_ZERO, sizeof(buffer));
+		
+		/* Getting the task information */
+		task = current;
+		
+		/* Getting the previous task information */
+		previous_task= list_entry(task->tasks.prev, struct task_struct, tasks);
 
-		timeout = ktime_add_us(timeout, 500000);
+		/* Getting the next task information */
+		next_task=list_entry(task->tasks.next, struct task_struct, tasks);
+
+		sprintf(buffer, "\tCurrent Task Information:\n Name: %s\nPID: %d\nvruntime: %llu\n\n\n\n", (task->comm), (task->pid), task->se.vruntime);
+ 
+		sprintf(buffer, "%s\tPrevious Task Information:\n Name: %s\nPID: %d\nvruntime: %llu\n\n\n\n", buffer, (previous_task->comm), (previous_task->pid), previous_task->se.vruntime);
+
+	    sprintf(buffer, "%s\tNext Task Information:\n Name: %s\nPID: %d\nvruntime: %llu\n\n\n\n", buffer, (next_task->comm), (next_task->pid), next_task->se.vruntime);
+
+
+		/* Writing data to kernel fifo */
+		kfifo_in(&test, buffer, strlen(buffer));
+		
+		/* setting timeout for one second */
+		timeout = ktime_add_us(timeout, TIMER_VALUE);
 		__set_current_state(TASK_UNINTERRUPTIBLE);
 		schedule_hrtimeout_range(&timeout, 100, HRTIMER_MODE_ABS);
 	}
 
 	printk(KERN_INFO "End of thread1");
 	
-	do_exit(0);
-	return 0;
+	do_exit(KFIFO_NUM_ZERO);
+	return KFIFO_NUM_ZERO;
 }
 
+
+/**
+​ * ​ ​ @brief​ : Thread function for second thread.
+ *
+ * ​ ​ @param​ ​: data for any arguments passed 
+​ *
+​ * ​ ​ @return​ : int (status of the thread exit)
+​**/
+
 int second_thread_fn(void * data) {
-	unsigned char buf[6] = {0};
+	unsigned char buffer[BUFFER_SIZE];
 	unsigned char c;
 
 	printk(KERN_INFO "Start of thread2");
 
 	while(!kthread_should_stop()){
 		
-		//while(kfifo_avail(&test)){
-
-			//down_read(&list_lock);
-			if(kfifo_len(&test) > 0){
+			/* If data is present on the fifo */
+			if(kfifo_len(&test) > KFIFO_NUM_ZERO){
 				
-				c = kfifo_get(&test, buf);
-				printk(KERN_INFO "buf: %s\n", buf);
+				memset(buffer, KFIFO_NUM_ZERO, sizeof(buffer));
+				kfifo_out(&test, buffer, BUFFER_SIZE);	
+				printk(KERN_INFO "\n\n %s \n\n", buffer);
 			}
-	
-			//up_read(&list_lock);
-		//}
 	
 	}
 
 	printk(KERN_INFO "End of thread2");
 
-	do_exit(0);
-	return 0;
+	do_exit(KFIFO_NUM_ZERO);
+	return KFIFO_NUM_ZERO;
 }
 
 /**
-​* ​ ​ @brief​ : Initilaises the kernel module and kernel timer
+​* ​ ​ @brief​ : Initialises the kernel module and which spawns two threads
 ​*
 ​* ​ ​ Returns a status code of kernel module
 ​*
@@ -163,10 +154,8 @@ int second_thread_fn(void * data) {
 
 static int __init thread_init(void){
 	
-	char  first_thread_name[8]="thread1";
-	char  second_thread_name[8]="thread2";
-	//struct sched_param param = { .sched_priority = MAX_RT_PRIO - 1 };
-	//struct sched_param param1 = { .sched_priority = MAX_RT_PRIO - 2 };
+	char  first_thread_name[NAME_BUFFER]="thread1";
+	char  second_thread_name[NAME_BUFFER]="thread2";
 	
 	printk(KERN_INFO "In thread_init function");
 	
@@ -179,7 +168,6 @@ static int __init thread_init(void){
 	}
 	
 	printk(KERN_INFO "First thread created");
-	//sched_setscheduler(thread1, SCHED_FIFO, &param);
 	wake_up_process(thread1);
 	
 
@@ -189,11 +177,9 @@ static int __init thread_init(void){
 		return -ESRCH;
 	}
 	printk(KERN_INFO "Second thread created");
-	//sched_setscheduler(thread2, SCHED_FIFO, &param1);
 	wake_up_process(thread2);
-	
 
-	return 0;
+	return KFIFO_NUM_ZERO;
 }
 
 /**
@@ -207,6 +193,7 @@ static int __init thread_init(void){
 static void __exit thread_exit(void){
 	
 	int ret;
+	
 	ret = kthread_stop(thread1);
 	if(!ret)
 		printk(KERN_INFO "First thread stopped");
