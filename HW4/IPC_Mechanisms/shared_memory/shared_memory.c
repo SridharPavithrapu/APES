@@ -24,9 +24,28 @@ typedef struct {
     	bool switch_status;
 } message;
 
+sem_t mutex;
+
 void  child_process(void)
 {
 	printf("Start of the child process \n");
+	
+	message receive_message;
+	
+	/* Name of the shared memory object */
+	const char *sm_name = "SHARED_MEM";
+	
+	/* Shared memory file descriptor */
+	int shm_fd;
+	
+	/* Pointer to the shared memory object */
+	void *sm_ptr;
+	
+	/* Creating shared memory object */
+	shm_fd = shm_open(sm_name, O_CREAT | O_RDWR, SHARED_MEMORY_PERMISSIONS);
+	
+	/* Memory mapping the shared memory object */
+	sm_ptr = mmap(0, sizeof(receive_message), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
 	
 	char send_buffer[BUFFER_SIZE] = {0}; 
 	mqd_t mq2;
@@ -38,39 +57,28 @@ void  child_process(void)
 		exit(1);
 	}
 	
-	message receive_message;
+	sem_wait(&mutex);
+	strncpy((char *)&receive_message, (char *)ptr, sizeof(receive_message));
+	sem_post(&mutex);
+	
+	char output_buffer[BUFFER_SIZE] = {0};
+	strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+	printf("\nString received from parent process:%s\n",output_buffer);
+	printf("String length received from parent process:%d\n",receive_message.info.string_length);
+	printf("Switch status received from parent process:%d\n\n",receive_message.switch_status);
+	
 	message sent_message;
-	struct mq_attr *attr1;
-	attr1 = malloc(sizeof(struct mq_attr));
-	mq_getattr(mq2,attr1);
-
-	if( mq_receive(mq2,(char *)&receive_message,attr1->mq_msgsize,NULL) == -1){
-		
-		printf("Error in receiving message on message_queue with erro:%s\n",strerror(errno));
-			
-	}
-	else{
-		char output_buffer[BUFFER_SIZE] = {0};
-		strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
-		printf("\nString received from parent process:%s\n",output_buffer);
-		printf("String length received from parent process:%d\n",receive_message.info.string_length);
-		printf("Switch status received from parent process:%d\n\n",receive_message.switch_status);
-	}
-
+	char send_buffer[BUFFER_SIZE] = {0}; 
+	
 	/* Sending acknowledgment to parent process */
 	sprintf(send_buffer, "Switch status changed to %d",receive_message.switch_status);
 	strncpy(sent_message.info.string , send_buffer, strlen(send_buffer));
 	sent_message.info.string_length = strlen(send_buffer);
 	sent_message.switch_status = receive_message.switch_status;
 
-	if( mq_send(mq2,(char *)&sent_message,sizeof(sent_message),1)== -1){
-
-		printf("Error in sending message on message_queue with erro:%s\n",strerror(errno));
-	}
-	
-
-	mq_close(mq2);
-	mq_unlink(QUEUE_NAME);
+	sem_wait(&mutex);
+	sprintf(sm_ptr, "%s", &sent_message);
+	sem_post(&mutex);
 
 	printf("End of the child process \n");
 	
@@ -107,28 +115,23 @@ void  parent_process(void)
 	sample_message.info.string_length = strlen(send_buffer);
 	sample_message.switch_status = true;	
 	
+	sem_wait(&mutex);
 	sprintf(sm_ptr, "%s", &sample_message);
-
+	sem_post(&mutex);
+	
 	message receive_message;
-	struct mq_attr *attr1;
-	attr1 = malloc(sizeof(struct mq_attr));
-	mq_getattr(mq1,attr1);
 
-	if( mq_receive(mq1,(char *)&receive_message,attr1->mq_msgsize,NULL) == -1){
-		
-		printf("Error in receiving message on message_queue with erro:%s\n",strerror(errno));
-			
-	}
-	else{
-		char output_buffer[BUFFER_SIZE] = {0};
-		strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
-		printf("\nString received from child process:%s\n",output_buffer);
-		printf("String length received from child process:%d\n",receive_message.info.string_length);
-		printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
-	}
+	sem_wait(&mutex);
+	strncpy((char *)&receive_message, (char *)ptr, sizeof(receive_message));
+	sem_post(&mutex);
+	
+	char output_buffer[BUFFER_SIZE] = {0};
+	strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+	printf("\nString received from child process:%s\n",output_buffer);
+	printf("String length received from child process:%d\n",receive_message.info.string_length);
+	printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
 
-	mq_close(mq1);
-	mq_unlink(QUEUE_NAME);
+	
 	
 	printf("End of the parent process \n");
 }
@@ -136,12 +139,21 @@ void  parent_process(void)
 int  main(void)
 {
 	pid_t  pid;
+	
+	/* create, initialize semaphore */
+	if( sem_init(&mutex,1,1) < 0){
+		
+	  perror("semaphore initilization");
+	  exit(0);
+	}
 
 	pid = fork();
 	if (pid != 0) 
 	  child_process();
 	else 
 	  parent_process();
+  
+	sem_destroy(&mutex);
 	return 0;
 }
 
