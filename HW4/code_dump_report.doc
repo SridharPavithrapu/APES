@@ -1,0 +1,1198 @@
+/***************************************************************************** 
+* Copyright (C) 2018 by Sridhar Pavithrapu 
+* Redistribution, modification or use of this software in source or binary 
+* forms is permitted as long as the files maintain this copyright. Users are 
+* permitted to modify this and use it to learn about kernel timers.
+* Sridhar Pavithrapu and the University of Colorado are not liable for 
+* any misuse of this material.  
+*****************************************************************************/ 
+
+
+/** 
+* @file kthreads_process_tree.c 
+* @brief  Includes function declarations for practicing kthread.
+* @author Sridhar Pavithrapu 
+* @date March 6 2018 
+**/
+
+/* Headers Section */
+#include<linux/kernel.h>
+#include<linux/module.h>
+#include<linux/init.h>
+#include<linux/sched.h>
+#include<linux/string.h>
+#include<linux/kthread.h>
+
+
+/* Module description */
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Sridhar Pavithrapu");
+MODULE_DESCRIPTION("A simple kernel module to generate kthreads and priting processes information");
+MODULE_VERSION("1.0");
+MODULE_INFO(vermagic, "4.14.15 SMP mod_unload ");
+
+/* Global variables */
+static struct task_struct *thread1;
+extern struct task_struct init_task;
+
+/*** Function Definitions ***/
+
+/**
+​ * ​ ​ @brief​ : Thread function for printing metrics of process tree informations.
+ *
+ * ​ ​ @param​ ​: data for any arguments passed 
+​ *
+​ * ​ ​ @return​ : int (status of the thread exit)
+​**/
+
+static int process_metrics(void *data){
+
+	struct list_head *list_node;
+	struct task_struct *node_temp;
+	int count = 0;
+	
+	printk(KERN_INFO "Starting process tree metrics \n\n");
+	
+	node_temp = current;
+    
+	/* Starting process tree metrics */
+	while(!kthread_should_stop()){
+		
+		printk(KERN_INFO "\nThread Name:%s \n", node_temp->comm);
+		printk(KERN_INFO "Process Id:%d \n", node_temp->pid);
+		printk(KERN_INFO "Process Status:%d \n", node_temp->state);
+		
+		list_for_each(list_node, &node_temp->children)
+		{
+			count++;
+		}
+		printk(KERN_INFO "Number of children's in the process tree:%d \n", count);
+		count=0;
+                
+		printk(KERN_INFO "Nice Values:%d\n\n", (node_temp->rt_priority));	
+		if(node_temp != &init_task){
+			node_temp = node_temp->parent;
+		}
+		else{
+			break;
+		}
+	}
+	printk(KERN_INFO "End of process tree metrics \n");
+	
+	thread1 = NULL;
+	do_exit(0);
+	return 0;
+}
+
+/**
+​* ​ ​ @brief​ : Initializes the kernel module and which spawns thread for process tree traversal
+​*
+​* ​ ​ Returns a status code of kernel module
+​*
+​* ​ ​ @return​ successful initialization of kernel module
+​**/
+
+static __init int thread_init_process_traverse(void){
+
+    printk(KERN_INFO "In thread_init_process_traverse function.\n");
+	
+	/* Creating thread */
+	thread1 = kthread_create(process_metrics, NULL, "Process Tree Traversal Thread");
+	if (!IS_ERR(thread1))
+	{
+		printk(KERN_INFO "Thread creation for process traversal is done.\n");
+        wake_up_process(thread1);
+	}
+	else
+		printk(KERN_INFO "Error in creating thread.\n");
+	
+
+    return 0;
+}
+
+/**
+​ * ​ ​ @brief​ : Exiting the kernel module.
+ *
+ * ​ ​ @param​ ​: None
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+static __exit void thread_clean_process_traverse(void){
+	
+	printk(KERN_INFO "Unloading the kernel module.\n");
+	/* Error check for thread one */
+	if (thread1){
+		
+		kthread_stop(thread1);
+		thread1 = NULL;
+		printk(KERN_INFO "First thread stopped.\n");
+	}
+	else
+		printk(KERN_ERR "Error in thread deletion\n");
+}
+
+module_init(thread_init_process_traverse);
+module_exit(thread_clean_process_traverse);
+
+#include <linux/module.h>
+#include <linux/vermagic.h>
+#include <linux/compiler.h>
+
+MODULE_INFO(vermagic, VERMAGIC_STRING);
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__attribute__((section(".gnu.linkonce.this_module"))) = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+static const char __module_depends[]
+__used
+__attribute__((section(".modinfo"))) =
+"depends=";
+
+
+MODULE_INFO(srcversion, "725B8B808D8F0E562818B85");
+/***************************************************************************** 
+* Copyright (C) 2018 by Sridhar Pavithrapu 
+* Redistribution, modification or use of this software in source or binary 
+* forms is permitted as long as the files maintain this copyright. Users are 
+* permitted to modify this and use it to learn about kernel timers.
+* Sridhar Pavithrapu and the University of Colorado are not liable for 
+* any misuse of this material.  
+*****************************************************************************/ 
+
+
+/** 
+* @file pipes.c 
+* @brief  Includes function declarations for understanding pipes.
+* @author Sridhar Pavithrapu 
+* @date March 6 2018 
+**/
+
+/* Headers Section */
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<stdbool.h>
+#include<string.h>
+
+/* Macros declaration */
+#define BUFFER_SIZE 1024
+
+/* Global structures */
+/* Structure for storing string and its length */
+typedef struct{
+        char string[BUFFER_SIZE];
+        unsigned int string_length;
+}string_info;
+
+/* Structure for storing the string and switch status */
+typedef struct message
+{
+        string_info string_message;
+        bool switch_status;
+}message;
+
+/* Global variables */
+int parent_to_child_pipefd[2]; 
+int child_to_parent_pipefd[2];
+
+
+/*** Function Definitions ***/
+
+/**
+​ * ​ ​ @brief​ : process function for child process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  child_process(void)
+{
+	printf("Start of the child process \n");
+	
+	message receive_message;
+	message sent_message;
+	int return_value;
+	char send_buffer[BUFFER_SIZE] = {0}; 
+
+	close(child_to_parent_pipefd[0]);
+	close(parent_to_child_pipefd[1]);
+
+	return_value = read(parent_to_child_pipefd[0], &receive_message, sizeof(receive_message));
+	if(return_value > 0 )
+	{
+		char output_buffer[BUFFER_SIZE] = {0};
+		strncpy(output_buffer, receive_message.string_message.string, receive_message.string_message.string_length);
+		printf("\nString received from parent process:%s\n",output_buffer);
+		printf("String length received from parent process:%d\n",receive_message.string_message.string_length);
+		printf("Switch status received from parent process:%d\n\n",receive_message.switch_status);
+		fflush(stdout);
+		
+		
+		/* Sending acknowledgment to parent process */
+		sprintf(send_buffer, "Switch status changed to %d",receive_message.switch_status);
+		strncpy(sent_message.string_message.string , send_buffer, strlen(send_buffer));
+		sent_message.string_message.string_length = strlen(send_buffer);
+		sent_message.switch_status = receive_message.switch_status;
+		
+		return_value = write(child_to_parent_pipefd[1],  &sent_message, sizeof(sent_message));
+	}
+
+	close(child_to_parent_pipefd[1]);
+	close(parent_to_child_pipefd[0]);
+	
+	
+}
+
+/**
+​ * ​ ​ @brief​ : process function for parent process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  parent_process(void)
+{
+	printf("Start of the parent process \n"); 
+	
+	close(child_to_parent_pipefd[1]);
+	close(parent_to_child_pipefd[0]);
+	int return_value;
+	
+	message sample_message;
+	message receive_message;
+	char send_buffer[BUFFER_SIZE] = {0};
+
+	bzero(&sample_message, sizeof(sample_message));
+	strncpy(send_buffer, "Sending message for switch status", strlen("Sending message for switch status"));
+	strncpy(sample_message.string_message.string , send_buffer, strlen(send_buffer));
+	sample_message.string_message.string_length = strlen(send_buffer);
+	sample_message.switch_status = true;
+
+	return_value = write(parent_to_child_pipefd[1],  &sample_message, sizeof(sample_message));
+	if(return_value > 0)
+	{
+		bzero(&receive_message, sizeof(receive_message));
+		return_value = read(child_to_parent_pipefd[0], &receive_message, sizeof(receive_message));
+		if(return_value>0)
+		{
+			char output_buffer[BUFFER_SIZE] = {0};
+			strncpy(output_buffer, receive_message.string_message.string, receive_message.string_message.string_length);
+			printf("\nString received from child process:%s\n",output_buffer);
+			printf("String length received from child process:%d\n",receive_message.string_message.string_length);
+			printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
+			fflush(stdout);
+		}
+	}
+	close(child_to_parent_pipefd[0]);
+	close(parent_to_child_pipefd[1]);
+}
+
+/**
+​ * ​ ​ @brief​ : Main function for spawning  processes.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : int (status)
+​**/
+
+int  main(void)
+{
+	int status; 
+	pid_t  pid;
+
+	/* Creating pipe communication */
+	status = pipe(child_to_parent_pipefd);
+	if(status)
+	{
+		perror("Child to parent pipe failure \n");
+		exit(1);
+	}
+	status = pipe(parent_to_child_pipefd);
+	if(status)
+	{
+		perror("Parent to child pipe failure \n");
+		close(child_to_parent_pipefd[0]);
+		close(child_to_parent_pipefd[1]);
+		exit(1);
+	}
+	
+	/* Creating the processes */
+	pid = fork();
+	if (pid != 0) 
+	  child_process();
+	else 
+	  parent_process();
+	
+	return 0;
+}
+
+/***************************************************************************** 
+* Copyright (C) 2018 by Sridhar Pavithrapu 
+* Redistribution, modification or use of this software in source or binary 
+* forms is permitted as long as the files maintain this copyright. Users are 
+* permitted to modify this and use it to learn about kernel timers.
+* Sridhar Pavithrapu and the University of Colorado are not liable for 
+* any misuse of this material.  
+*****************************************************************************/ 
+
+
+/** 
+* @file shared_memory.c 
+* @brief  Includes function declarations for understanding shared memory.
+* @author Sridhar Pavithrapu 
+* @date March 6 2018 
+**/
+
+/* Headers Section */
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <semaphore.h>
+#include <sys/shm.h>
+#include <sys/mman.h>
+#include <fcntl.h>           
+#include <sys/stat.h>        
+#include <mqueue.h>
+#include <errno.h>
+
+
+/* Macros declaration */
+#define SHARED_MEMORY_PERMISSIONS 0666
+#define BUFFER_SIZE 1024
+
+/* Global structures */
+/* Structure for storing string and its length */
+typedef struct {
+	char string[BUFFER_SIZE];
+    	int string_length;
+} string_info;
+
+/* Structure for storing the string and switch status */
+typedef struct {
+	string_info info;
+    	bool switch_status;
+} message;
+
+/* Declaring semaphore */
+sem_t mutex;
+
+/**
+​ * ​ ​ @brief​ : process function for child process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  child_process(void)
+{
+	printf("Start of the child process \n");
+	
+	message receive_message;
+	
+	/* Name of the shared memory object */
+	const char *sm_name = "SHARED_MEM";
+	
+	/* Shared memory file descriptor */
+	int shm_fd;
+	
+	/* Pointer to the shared memory object */
+	void *sm_ptr;
+	
+	/* Creating shared memory object */
+	shm_fd = shm_open(sm_name, O_CREAT | O_RDWR, SHARED_MEMORY_PERMISSIONS);
+	
+	/* Memory mapping the shared memory object */
+	sm_ptr = mmap(0, sizeof(receive_message), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+	
+	sem_wait(&mutex);
+	/* Receiving message on shared memory */
+	memcpy((char *)&receive_message, sm_ptr, sizeof(receive_message));
+	msync(sm_ptr,sizeof(receive_message),MS_SYNC);
+	sem_post(&mutex);
+	
+
+	char output_buffer[BUFFER_SIZE] = {0};
+	strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+	printf("\nString received from parent process:%s\n",output_buffer);
+	printf("String length received from parent process:%d\n",receive_message.info.string_length);
+	printf("Switch status received from parent process:%d\n\n",receive_message.switch_status);
+	
+	message sent_message;
+	char send_buffer[BUFFER_SIZE] = {0}; 
+	
+	/* Sending acknowledgment to parent process */ 
+	sprintf(send_buffer, "Switch status changed to %d",receive_message.switch_status);
+	strncpy(sent_message.info.string , send_buffer, strlen(send_buffer));
+	sent_message.info.string_length = strlen(send_buffer);
+	sent_message.switch_status = receive_message.switch_status;
+
+	sem_wait(&mutex);
+	/* Sending message on shared memory */
+	memcpy(sm_ptr, (char *)&sent_message , sizeof(sent_message));
+	msync(sm_ptr,sizeof(sent_message),MS_SYNC);
+	sem_post(&mutex);
+
+	//shm_unlink(sm_name);
+	printf("End of the child process \n");
+	
+}
+
+/**
+​ * ​ ​ @brief​ : process function for parent process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  parent_process(void)
+{
+    printf("Start of the parent process \n"); 
+	
+	message sample_message;
+	
+	/* Name of the shared memory object */
+	const char *sm_name = "SHARED_MEM";
+	
+	/* Shared memory file descriptor */
+	int shm_fd;
+	
+	/* Pointer to the shared memory object */
+	void *sm_ptr;
+	
+	/* Creating shared memory object */
+	shm_fd = shm_open(sm_name, O_CREAT | O_RDWR, SHARED_MEMORY_PERMISSIONS);
+	
+	/* Configuring size of shared memory object */
+	ftruncate(shm_fd, sizeof(sample_message));
+	
+	/* Memory mapping the shared memory object */
+	sm_ptr = mmap(0, sizeof(sample_message), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+	
+	char send_buffer[BUFFER_SIZE] ={0};
+	strncpy(send_buffer, "Sending message for switch status", strlen("Sending message for switch status"));
+
+	strncpy(sample_message.info.string , send_buffer, strlen(send_buffer));
+	sample_message.info.string_length = strlen(send_buffer);
+	sample_message.switch_status = true;	
+	
+	sem_wait(&mutex);
+	/* Sending message on shared memory */
+	memcpy(sm_ptr, (char *)&sample_message, sizeof(sample_message));
+	msync(sm_ptr,sizeof(sample_message),MS_SYNC);
+	sem_post(&mutex);
+	sleep(0.5);
+	message receive_message;
+
+	sem_wait(&mutex);
+	/* Receiving message on shared memory */
+	memcpy((char *)&receive_message,sm_ptr, sizeof(receive_message));
+	msync(sm_ptr,sizeof(receive_message),MS_SYNC);
+	sem_post(&mutex);
+	
+	char output_buffer[BUFFER_SIZE] = {0};
+	strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+	printf("\nString received from child process:%s\n",output_buffer);
+	printf("String length received from child process:%d\n",receive_message.info.string_length);
+	printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
+
+	
+	//shm_unlink(sm_name);
+	printf("End of the parent process \n");
+	
+}
+
+/**
+​ * ​ ​ @brief​ : Main function for spawning  processes.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : int (status)
+​**/
+
+int  main(void)
+{
+	pid_t  pid;
+	
+	/* create and  initialize semaphore */
+	if( sem_init(&mutex,1,1) < 0){
+		
+	  perror("semaphore initilization");
+	  exit(0);
+	}
+
+	/* Creating the processes */
+	pid = fork();
+	if (pid != 0) 
+	  child_process();
+	else 
+	  parent_process();
+  
+	/* Destroying the semaphore */
+	sem_destroy(&mutex);
+	return 0;
+}
+
+
+
+/***************************************************************************** 
+* Copyright (C) 2018 by Sridhar Pavithrapu 
+* Redistribution, modification or use of this software in source or binary 
+* forms is permitted as long as the files maintain this copyright. Users are 
+* permitted to modify this and use it to learn about kernel timers.
+* Sridhar Pavithrapu and the University of Colorado are not liable for 
+* any misuse of this material.  
+*****************************************************************************/ 
+
+
+/** 
+* @file message_queue.c 
+* @brief  Includes function declarations for understanding message queue.
+* @author Sridhar Pavithrapu 
+* @date March 6 2018 
+**/
+
+/* Headers Section */
+#include <stdio.h>
+#include <string.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <fcntl.h>           
+#include <sys/stat.h>        
+#include <mqueue.h>
+#include <errno.h>
+
+/* Macros declaration */
+#define QUEUE_NAME "/example_mq"
+#define QUEUE_PERMISSIONS 0666
+#define BUFFER_SIZE 1024
+
+/* Global structures */
+/* Structure for storing string and its length */
+typedef struct {
+	char string[BUFFER_SIZE];
+    unsigned int string_length;
+} string_info;
+
+/* Structure for storing the string and switch status */
+typedef struct {
+	string_info info;
+    bool switch_status;
+} message;
+
+/*** Function Definitions ***/
+
+/**
+​ * ​ ​ @brief​ : process function for child process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  child_process(void)
+{
+	printf("Start of the child process \n");
+	
+	char send_buffer[BUFFER_SIZE] = {0}; 
+	mqd_t mq2;
+	message receive_message;
+	message sent_message;
+	struct mq_attr *attr1;
+	
+	
+	mq2 = mq_open(QUEUE_NAME,O_RDWR | O_CREAT, QUEUE_PERMISSIONS, NULL);
+	if(mq2 == -1) {
+		
+		printf("Error in opening message_queue\n");
+		exit(1);
+	}
+	
+	attr1 = malloc(sizeof(struct mq_attr));
+	mq_getattr(mq2,attr1);
+	
+	/* Receiving message on message queue */
+	if( mq_receive(mq2,(char *)&receive_message,attr1->mq_msgsize,NULL) == -1){
+		
+		printf("Error in receiving message on message_queue with erro:%s\n",strerror(errno));
+			
+	}
+	else{
+		char output_buffer[BUFFER_SIZE] = {0};
+		strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+		printf("\nString received from parent process:%s\n",output_buffer);
+		printf("String length received from parent process:%d\n",receive_message.info.string_length);
+		printf("Switch status received from parent process:%d\n\n",receive_message.switch_status);
+	}
+
+	/* Sending acknowledgment to parent process */
+	sprintf(send_buffer, "Switch status changed to %d",receive_message.switch_status);
+	strncpy(sent_message.info.string , send_buffer, strlen(send_buffer));
+	sent_message.info.string_length = strlen(send_buffer);
+	sent_message.switch_status = receive_message.switch_status;
+
+	/* Sending message on message queue */
+	if( mq_send(mq2,(char *)&sent_message,sizeof(sent_message),1)== -1){
+
+		printf("Error in sending message on message_queue with erro:%s\n",strerror(errno));
+	}
+	
+
+	mq_close(mq2);
+	mq_unlink(QUEUE_NAME);
+
+	printf("End of the child process \n");
+	
+}
+
+/**
+​ * ​ ​ @brief​ : process function for parent process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  parent_process(void)
+{
+    printf("Start of the parent process \n"); 
+	
+	mqd_t mq1;
+	message sample_message;
+	message receive_message;
+	struct mq_attr *attr1;
+	
+	
+	char send_buffer[BUFFER_SIZE] ={0};
+	strncpy(send_buffer, "Sending message for switch status", strlen("Sending message for switch status"));
+
+	strncpy(sample_message.info.string , send_buffer, strlen(send_buffer));
+	sample_message.info.string_length = strlen(send_buffer);
+	sample_message.switch_status = true;	
+	
+	mq1 = mq_open(QUEUE_NAME,O_RDWR | O_CREAT, QUEUE_PERMISSIONS, NULL);
+	if(mq1 == -1) {
+		
+		printf("Error in opening message_queue\n");
+		exit(1);
+	}
+
+	/* Sending message on message queue */
+	if( mq_send(mq1,(char *)&sample_message,sizeof(sample_message),1)== -1){
+		printf("Error in sending message on message_queue\n");
+	}
+
+	
+	attr1 = malloc(sizeof(struct mq_attr));
+	mq_getattr(mq1,attr1);
+
+	/* Receiving message on message queue */
+	if( mq_receive(mq1,(char *)&receive_message,attr1->mq_msgsize,NULL) == -1){
+		
+		printf("Error in receiving message on message_queue with erro:%s\n",strerror(errno));
+			
+	}
+	else{
+		char output_buffer[BUFFER_SIZE] = {0};
+		strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+		printf("\nString received from child process:%s\n",output_buffer);
+		printf("String length received from child process:%d\n",receive_message.info.string_length);
+		printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
+	}
+
+	mq_close(mq1);
+	mq_unlink(QUEUE_NAME);
+	
+	printf("End of the parent process \n");
+}
+
+/**
+​ * ​ ​ @brief​ : Main function for spawning  processes.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : int (status)
+​**/
+
+int  main(void)
+{
+	
+	pid_t  pid;
+
+	/* Creating the processes */
+	pid = fork();
+	if (pid != 0) 
+	  child_process();
+	else 
+	  parent_process();
+	return 0;
+}
+
+
+
+/***************************************************************************** 
+* Copyright (C) 2018 by Sridhar Pavithrapu 
+* Redistribution, modification or use of this software in source or binary 
+* forms is permitted as long as the files maintain this copyright. Users are 
+* permitted to modify this and use it to learn about kernel timers.
+* Sridhar Pavithrapu and the University of Colorado are not liable for 
+* any misuse of this material.  
+*****************************************************************************/ 
+
+
+/** 
+* @file sockets.c 
+* @brief  Includes function declarations for understanding sockets.
+* @author Sridhar Pavithrapu 
+* @date March 6 2018 
+**/
+
+/* Headers Section */
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/socket.h>
+#include<sys/un.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<stdbool.h>
+#include<string.h>
+
+#define SOCKET_PATH "./IPC_Socket"
+#define BUFFER_SIZE 1024
+
+typedef struct {
+        char string[BUFFER_SIZE];
+        unsigned int string_length;
+}string_info;
+
+typedef struct {
+        string_info string_message;
+        bool switch_status;
+}message;
+
+/* Global variables */
+int sockfd, sockfd_child, sockfd_parent;
+struct sockaddr_un server, client;
+
+  
+/*** Function Definitions ***/
+
+/**
+​ * ​ ​ @brief​ : process function for child process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  child_process(void)
+{
+	message receive_message;
+	message sent_message;
+	int return_value;
+
+	bzero(&receive_message, sizeof(receive_message));
+
+	socklen_t sockaddr_size = sizeof(struct sockaddr_un);
+	sockfd_child = accept(sockfd, (struct sockaddr *)&client, &sockaddr_size);
+	if(sockfd_child<0)
+	{
+		close(sockfd);
+		exit(1);
+	}
+	
+	return_value = read(sockfd_child, &receive_message, sizeof(receive_message));
+	if(return_value > 0 )
+	{
+		char output_buffer[BUFFER_SIZE] = {0};
+		strncpy(output_buffer, receive_message.string_message.string, receive_message.string_message.string_length);
+		printf("\nString received from parent process:%s\n",output_buffer);
+		printf("String length received from parent process:%d\n",receive_message.string_message.string_length);
+		printf("Switch status received from parent process:%d\n\n",receive_message.switch_status);
+		fflush(stdout);
+		
+		bzero(&sent_message, sizeof(sent_message));
+		
+		/* Sending acknowledgment to parent process */
+		char send_buffer[BUFFER_SIZE]={0};
+		sprintf(send_buffer, "Switch status changed to %d",receive_message.switch_status);
+		strncpy(sent_message.string_message.string , send_buffer, strlen(send_buffer));
+		sent_message.string_message.string_length = strlen(send_buffer);
+		sent_message.switch_status = receive_message.switch_status;
+		
+		return_value = write(sockfd_child,  &sent_message, sizeof(sent_message));
+	}
+	
+	/* Closing sockets */
+	close(sockfd);
+	close(sockfd_child);
+	
+	
+}
+  
+/**
+​ * ​ ​ @brief​ : process function for parent process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  parent_process(void)
+{
+	message sample_message;
+	message receive_message;
+	char send_buffer[BUFFER_SIZE] ={0};
+	int return_value;
+
+	bzero(&sample_message, sizeof(sample_message));
+	
+
+	sockfd_parent = socket(AF_UNIX, SOCK_STREAM, 0);          
+	if (sockfd_parent < 0)
+	{
+		perror("Error opening socket \n");
+		close(sockfd);
+		close(sockfd_parent);
+		exit(1);
+	}
+
+	socklen_t sockaddr_size = sizeof(struct sockaddr_un);
+	return_value = connect(sockfd_parent, (struct sockaddr *)&server, sockaddr_size);    
+	printf("Return value:%d \n",return_value);
+
+	strncpy(send_buffer, "Sending message for switch status", strlen("Sending message for switch status"));
+
+	strncpy(sample_message.string_message.string , send_buffer, strlen(send_buffer));
+	sample_message.string_message.string_length = strlen(send_buffer);
+	sample_message.switch_status = true;
+	
+	/* Check for connection */
+	if(return_value == 0)
+	{
+		return_value = write(sockfd_parent,  &sample_message, sizeof(sample_message));        
+		if(return_value > 0)
+		{
+			bzero(&receive_message, sizeof(receive_message));
+			return_value = read(sockfd_parent, &receive_message, sizeof(receive_message));
+			if(return_value>0)
+			{
+				char output_buffer[BUFFER_SIZE] = {0};
+				strncpy(output_buffer, receive_message.string_message.string, receive_message.string_message.string_length);
+				printf("\nString received from child process:%s\n",output_buffer);
+				printf("String length received from child process:%d\n",receive_message.string_message.string_length);
+				printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
+				fflush(stdout);
+			}
+		}
+	}
+
+	/* Closing sockets */
+	close(sockfd);
+	close(sockfd_parent);
+}
+  
+ /**
+​ * ​ ​ @brief​ : Main function for spawning  processes.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : int (status)
+​**/
+
+int  main(void)
+{
+	pid_t  pid;
+
+    sockfd = socket(AF_UNIX, SOCK_STREAM, 0);          
+	if (sockfd < 0) 
+	{
+		perror("Error in opening socket \n");
+		exit(1);
+	}
+	server.sun_family = AF_UNIX;			
+	strcpy(server.sun_path, SOCKET_PATH);			
+	unlink(SOCKET_PATH);
+
+	if (bind(sockfd, (struct sockaddr *) &server, sizeof(struct sockaddr_un))) 
+	{
+		perror("Error in binding the Socket\n");
+		exit(1);
+	}
+	printf("Socket name %s\n", server.sun_path);
+	
+	/* Listening for maximum of 10 connections */
+	listen(sockfd, 10);				
+
+	/* Creating the processes */
+	pid = fork();
+	if(pid < 0){
+		perror("Error creating a child process");
+		close(sockfd);
+		exit(1);
+	}
+	else if(pid == 0){ 
+	  parent_process();
+	}
+	else{
+	  child_process();
+	}
+	
+	
+	unlink(SOCKET_PATH);
+	return 0;
+}
+#include <linux/module.h>
+#include <linux/vermagic.h>
+#include <linux/compiler.h>
+
+MODULE_INFO(vermagic, VERMAGIC_STRING);
+MODULE_INFO(name, KBUILD_MODNAME);
+
+__visible struct module __this_module
+__attribute__((section(".gnu.linkonce.this_module"))) = {
+	.name = KBUILD_MODNAME,
+	.init = init_module,
+#ifdef CONFIG_MODULE_UNLOAD
+	.exit = cleanup_module,
+#endif
+	.arch = MODULE_ARCH_INIT,
+};
+
+static const char __module_depends[]
+__used
+__attribute__((section(".modinfo"))) =
+"depends=";
+
+
+MODULE_INFO(srcversion, "0EA0363B19FB3534341269D");
+/***************************************************************************** 
+* Copyright (C) 2018 by Sridhar Pavithrapu 
+* Redistribution, modification or use of this software in source or binary 
+* forms is permitted as long as the files maintain this copyright. Users are 
+* permitted to modify this and use it to learn about kernel timers.
+* Sridhar Pavithrapu and the University of Colorado are not liable for 
+* any misuse of this material.  
+*****************************************************************************/ 
+
+
+/** 
+* @file kernel_threads.c 
+* @brief  Includes function declarations processes communicationg using kfifo.
+* @author Sridhar Pavithrapu 
+* @date March 6 2018 
+**/
+
+/* Headers Section */
+#include <linux/module.h>
+#include <linux/kernel.h>
+#include <linux/init.h>
+#include <linux/stat.h>
+#include <linux/timer.h>
+#include <linux/kthread.h>  
+#include <linux/sched.h>  
+#include <linux/time.h>   
+#include <linux/proc_fs.h>
+#include <linux/kfifo.h>
+#include <linux/hrtimer.h>
+#include <linux/delay.h> 
+#include <linux/err.h>
+#include <linux/irq.h>
+#include <linux/clk.h>
+#include <linux/list.h>
+#include <linux/rtmutex.h>
+#include <linux/string.h>
+
+
+/* Module description */
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Sridhar Pavithrapu");
+MODULE_DESCRIPTION("A simple kernel module with demonstration of kernel threads with kfifo");
+MODULE_VERSION("1.0");
+MODULE_INFO(vermagic, "4.14.15 SMP mod_unload ");
+
+/* Macros declaration */
+/* Fifo size in elements (bytes) */
+#define FIFO_SIZE	2048
+#define BUFFER_SIZE 200
+#define TIMER_VALUE 1000000
+#define NAME_BUFFER 8
+#define KFIFO_NUM_ZERO 0
+
+
+/* Global variables */
+static DECLARE_KFIFO(test, unsigned char, FIFO_SIZE);
+static struct task_struct *thread1;
+static struct task_struct *thread2;
+
+
+/*** Function Definitions ***/
+
+/**
+​ * ​ ​ @brief​ : Thread function for first thread.
+ *
+ * ​ ​ @param​ ​: data for any arguments passed 
+​ *
+​ * ​ ​ @return​ : int (status of the thread exit)
+​**/
+
+int first_thread_fn(void * data) {
+	
+	char buffer[BUFFER_SIZE];
+	struct task_struct *task, *previous_task, *next_task;		
+	ktime_t timeout = ktime_get();
+	
+	printk(KERN_INFO "Start of thread1");
+	
+	while(!kthread_should_stop()){
+
+		memset(buffer, KFIFO_NUM_ZERO, sizeof(buffer));
+		
+		/* Getting the task information */
+		task = current;
+		
+		/* Getting the previous task information */
+		previous_task= list_entry(task->tasks.prev, struct task_struct, tasks);
+
+		/* Getting the next task information */
+		next_task=list_entry(task->tasks.next, struct task_struct, tasks);
+
+		sprintf(buffer, "\nCurrent Task Information:\n Name: %s\nPID: %d\nvruntime: %llu \n\n", (task->comm), (task->pid), task->se.vruntime);
+ 
+		sprintf(buffer, "%s\nPrevious Task Information:\n Name: %s\nPID: %d\nvruntime: %llu \n\n", buffer, (previous_task->comm), (previous_task->pid), previous_task->se.vruntime);
+
+	    sprintf(buffer, "%s\nNext Task Information:\n Name: %s \nPID: %d\nvruntime: %llu \n\n", buffer, (next_task->comm), (next_task->pid), next_task->se.vruntime);
+
+
+		/* Writing data to kernel fifo */
+		kfifo_in(&test, buffer, strlen(buffer));
+		
+		/* setting timeout for one second */
+		timeout = ktime_add_us(timeout, TIMER_VALUE);
+		__set_current_state(TASK_UNINTERRUPTIBLE);
+		schedule_hrtimeout_range(&timeout, 100, HRTIMER_MODE_ABS);
+	}
+
+	printk(KERN_INFO "End of thread1");
+	
+	do_exit(KFIFO_NUM_ZERO);
+	return KFIFO_NUM_ZERO;
+}
+
+
+/**
+​ * ​ ​ @brief​ : Thread function for second thread.
+ *
+ * ​ ​ @param​ ​: data for any arguments passed 
+​ *
+​ * ​ ​ @return​ : int (status of the thread exit)
+​**/
+
+int second_thread_fn(void * data) {
+	unsigned char buffer[BUFFER_SIZE];
+
+	printk(KERN_INFO "Start of thread2");
+
+	while(!kthread_should_stop()){
+		
+			/* If data is present on the fifo */
+			if(kfifo_len(&test) > KFIFO_NUM_ZERO){
+				
+				memset(buffer, KFIFO_NUM_ZERO, sizeof(buffer));
+				kfifo_out(&test, buffer, BUFFER_SIZE);	
+				printk(KERN_INFO "\n\n %s \n\n", buffer);
+			}
+	
+	}
+
+	printk(KERN_INFO "End of thread2");
+
+	do_exit(KFIFO_NUM_ZERO);
+	return KFIFO_NUM_ZERO;
+}
+
+/**
+​* ​ ​ @brief​ : Initialises the kernel module and which spawns two threads
+​*
+​* ​ ​ Returns a status code of kernel module
+​*
+​* ​ ​ @return​ successful intialization of kernel module
+​**/
+
+static int __init thread_init(void){
+	
+	char  first_thread_name[NAME_BUFFER]="thread1";
+	char  second_thread_name[NAME_BUFFER]="thread2";
+	
+	printk(KERN_INFO "In thread_init function");
+	
+	INIT_KFIFO(test);
+
+	thread1 = kthread_create(first_thread_fn,NULL,first_thread_name);
+	if (IS_ERR(thread1)) {
+		printk(KERN_ERR "RT Failed to create RT thread\n");
+		return -ESRCH;
+	}
+	
+	printk(KERN_INFO "First thread created");
+	wake_up_process(thread1);
+	
+
+	thread2 = kthread_create(second_thread_fn,NULL,second_thread_name);
+	if (IS_ERR(thread2)) {
+		printk(KERN_ERR "RT Failed to create RT thread\n");
+		return -ESRCH;
+	}
+	printk(KERN_INFO "Second thread created");
+	wake_up_process(thread2);
+
+	return KFIFO_NUM_ZERO;
+}
+
+/**
+​ * ​ ​ @brief​ : Exiting the kernel module.
+ *
+ * ​ ​ @param​ ​: None
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+static void __exit thread_exit(void){
+	
+	int ret;
+	
+	ret = kthread_stop(thread1);
+	if(!ret)
+		printk(KERN_INFO "First thread stopped");
+		thread1 = NULL;
+	
+	ret = kthread_stop(thread2);
+	if(!ret)
+		printk(KERN_INFO "Second thread stopped");
+		thread2 = NULL;
+
+	kfifo_free(&test);
+}
+
+module_init(thread_init);
+module_exit(thread_exit);
