@@ -37,7 +37,7 @@
 /* Structure for storing string and its length */
 typedef struct {
 	char string[BUFFER_SIZE];
-    int string_length;
+    unsigned int string_length;
 } string_info;
 
 /* Structure for storing the string and switch status */

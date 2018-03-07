@@ -1,3 +1,21 @@
+/***************************************************************************** 
+* Copyright (C) 2018 by Sridhar Pavithrapu 
+* Redistribution, modification or use of this software in source or binary 
+* forms is permitted as long as the files maintain this copyright. Users are 
+* permitted to modify this and use it to learn about kernel timers.
+* Sridhar Pavithrapu and the University of Colorado are not liable for 
+* any misuse of this material.  
+*****************************************************************************/ 
+
+
+/** 
+* @file sockets.c 
+* @brief  Includes function declarations for understanding sockets.
+* @author Sridhar Pavithrapu 
+* @date March 6 2018 
+**/
+
+/* Headers Section */
 #include<stdio.h>
 #include<stdlib.h>
 #include<sys/socket.h>
@@ -7,141 +25,187 @@
 #include<stdbool.h>
 #include<string.h>
 
-#define PATH "./IPC_Socket"
-#define MAX_STRING_SIZE 1024
+#define SOCKET_PATH "./IPC_Socket"
+#define BUFFER_SIZE 1024
 
-typedef struct string_struct
-{
-        char string[MAX_STRING_SIZE];
+typedef struct {
+        char string[BUFFER_SIZE];
         unsigned int string_length;
-}string_struct;
+}string_info;
 
-typedef struct msg_buffer
+typedef struct {
+        string_info string_message;
+        bool switch_status;
+}message;
+
+/* Global variables */
+int sockfd, sockfd_child, sockfd_parent;
+struct sockaddr_un server, client;
+
+  
+/*** Function Definitions ***/
+
+/**
+​ * ​ ​ @brief​ : process function for child process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  child_process(void)
 {
-        string_struct string_message;
-        bool led_state;
-}msg_buffer;
+	message receive_message;
+	message sent_message;
+	int return_value;
 
-#define STRUCT_SIZE sizeof(msg_buffer)
+	bzero(&receive_message, sizeof(receive_message));
 
-int main()
+	socklen_t sockaddr_size = sizeof(struct sockaddr_un);
+	sockfd_child = accept(sockfd, (struct sockaddr *)&client, &sockaddr_size);
+	if(sockfd_child<0)
+	{
+		close(sockfd);
+		exit(1);
+	}
+	
+	return_value = read(sockfd_child, &receive_message, sizeof(receive_message));
+	if(return_value > 0 )
+	{
+		char output_buffer[BUFFER_SIZE] = {0};
+		strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+		printf("\nString received from parent process:%s\n",output_buffer);
+		printf("String length received from parent process:%d\n",receive_message.info.string_length);
+		printf("Switch status received from parent process:%d\n\n",receive_message.switch_status);
+		fflush(stdout);
+		
+		bzero(&sent_message, sizeof(sent_message));
+		
+		/* Sending acknowledgment to parent process */
+		sprintf(send_buffer, "Switch status changed to %d",receive_message.switch_status);
+		strncpy(sent_message.info.string , send_buffer, strlen(send_buffer));
+		sent_message.info.string_length = strlen(send_buffer);
+		sent_message.switch_status = receive_message.switch_status;
+		
+		return_value = write(sockfd_child,  &sent_message, sizeof(sent_message));
+	}
+	
+	/* Closing sockets */
+	close(sockfd);
+	close(sockfd_child);
+	
+	
+}
+  
+/**
+​ * ​ ​ @brief​ : process function for parent process.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : None
+​**/
+
+void  parent_process(void)
 {
-	int sockfd, msgsockfd_server, msgsockfd_client;
-	pid_t childPID;
-	struct sockaddr_un server, client;
+	message sample_message;
+	message receive_message;
+	char send_buffer[BUFFER_SIZE] ={0};
+	int return_value;
 
-     	sockfd = socket(AF_UNIX, SOCK_STREAM, 0);          //Creating a UNIX socket which is listening for connections
-	//Error in creating socket
-     	if (sockfd < 0) 
+	bzero(&sample_message, sizeof(sample_message));
+	bzero(buffer, sizeof(buffer));
+
+	sockfd_parent = socket(AF_UNIX, SOCK_STREAM, 0);          
+	if (sockfd_parent < 0)
 	{
-        	perror("opening stream socket");
-         	exit(1);
-     	}
-     	server.sun_family = AF_UNIX;			//Setting the family of the socket in the sockaddr_un structure
-     	strcpy(server.sun_path, PATH);			//Setting the path for the special file that is going to be created for UNIX socket
-        unlink(PATH);
+		perror("Error opening socket \n");
+		close(sockfd);
+		close(sockfd_parent);
+		exit(1);
+	}
 
-     	if (bind(sockfd, (struct sockaddr *) &server, sizeof(struct sockaddr_un))) 
+	socklen_t sockaddr_size = sizeof(struct sockaddr_un);
+	return_value = connect(sockfd_parent, (struct sockaddr *)&server, sockaddr_size);    
+	perror("Return value:%d \n",return_value);
+
+	strncpy(send_buffer, "Sending message for switch status", strlen("Sending message for switch status"));
+
+	strncpy(sample_message.info.string , send_buffer, strlen(send_buffer));
+	sample_message.info.string_length = strlen(send_buffer);
+	sample_message.switch_status = true;
+	
+	/* Check for connection */
+	if(return_value == 0)
 	{
-        	perror("Binding Socket");
-         	exit(1);
-      	}
-      	printf("Socket has name %s\n", server.sun_path);
-      	listen(sockfd, 5);				//Maximum limit of 5
+		return_value = write(sockfd_parent,  &sample_message, sizeof(sample_message));        
+		if(return_value > 0)
+		{
+			bzero(&receive_message, sizeof(receive_message));
+			return_value = read(sockfd_parent, &receive_message, STRUCT_SIZE);
+			if(return_value>0)
+			{
+				char output_buffer[BUFFER_SIZE] = {0};
+				strncpy(output_buffer, receive_message.info.string, receive_message.info.string_length);
+				printf("\nString received from child process:%s\n",output_buffer);
+				printf("String length received from child process:%d\n",receive_message.info.string_length);
+				printf("Switch status received from child process:%d\n\n",receive_message.switch_status);
+				fflush(stdout);
+			}
+		}
+	}
 
-	childPID = fork();				//Forking a client process
+	/* Closing sockets */
+	close(sockfd);
+	close(sockfd_parent);
+}
+  
+ /**
+​ * ​ ​ @brief​ : Main function for spawning  processes.
+ *
+ * ​ ​ @param​ ​: None 
+​ *
+​ * ​ ​ @return​ : int (status)
+​**/
 
-	if(childPID < 0)
+int  main(void)
+{
+	pid_t  pid;
+
+    sockfd = socket(AF_UNIX, SOCK_STREAM, 0);          
+	if (sockfd < 0) 
 	{
+		perror("Error in opening socket \n");
+		exit(1);
+	}
+	server.sun_family = AF_UNIX;			
+	strcpy(server.sun_path, SOCKET_PATH);			
+	unlink(SOCKET_PATH);
+
+	if (bind(sockfd, (struct sockaddr *) &server, sizeof(struct sockaddr_un))) 
+	{
+		perror("Error in binding the Socket\n");
+		exit(1);
+	}
+	printf("Socket name %s\n", server.sun_path);
+	
+	/* Listening for maximum of 10 connections */
+	listen(sockfd, 10);				
+
+	/* Creating the processes */
+	pid = fork();
+	if(pid < 0){
 		perror("Error creating a child process");
 		close(sockfd);
 		exit(1);
 	}
-	//Code for the client process
-	else if(childPID == 0)
-	{
-		msg_buffer msg;
-		char buffer[MAX_STRING_SIZE];
-		int retval;
-
-                bzero(&msg, sizeof(msg));
-                bzero(buffer, sizeof(buffer));
-
-		msgsockfd_client = socket(AF_UNIX, SOCK_STREAM, 0);          //Creating a socket that is going to be used by client to connect to and send messages to client
-		//Error opening sockets
-		if (msgsockfd_client < 0)
-	        {
-                	perror("opening stream socket");
-			close(sockfd);
-			close(msgsockfd_client);
-                	exit(1);
-        	}
-
-                socklen_t sockaddr_size = sizeof(struct sockaddr_un);
-                retval = connect(msgsockfd_client, (struct sockaddr *)&server, sockaddr_size);    //Client process connecting to the server process using UNIX socket
-		perror("return Value:");
-
-		sprintf(buffer, "Should I Switch on the LED on Beaglebone?");
-		printf("\nClient Process:\t%s", buffer);
-		fflush(stdout);
-
-		(msg.string_message).string_length = strlen(buffer);
-		strcpy((msg.string_message).string, buffer);
-		
-		//If Socket Stream connection to the remote server has been established 
-		if(retval==0)
-		{
-			retval = write(msgsockfd_client,  &msg, STRUCT_SIZE);        
-			if(retval > 0)
-			{
-				bzero(&msg, sizeof(msg));
-				retval = read(msgsockfd_client, &msg, STRUCT_SIZE);
-				if(retval>0)
-				{
-					if(msg.led_state)
-						printf("\nClient process:\tThe LED is switched on.\n");
-					else
-						printf("\nClient Process:\tThe LED is switched off.\n");
-					fflush(stdout);
-				}
-			}
-		}
-
-		//Closing opened sockets
-		close(sockfd);
-                close(msgsockfd_client);
-	
+	else if(pid == 0){ 
+	  parent_process();
 	}
-	//Code for the server process
-	else
-	{
-		msg_buffer msg;
-		int retval;
-
-		bzero(&msg, sizeof(msg));
-
-		socklen_t sockaddr_size = sizeof(struct sockaddr_un);
-		msgsockfd_server = accept(sockfd, (struct sockaddr *)&client, &sockaddr_size);
-		if(msgsockfd_server<0)
-		{
-			close(sockfd);
-			exit(1);
-		}
-		retval = read(msgsockfd_server, &msg, STRUCT_SIZE);
-		if(retval > 0 )
-		{
-			printf("\nServer Process:\tThe sent message is %s", (msg.string_message).string);
-			fflush(stdout);
-			bzero(&msg, sizeof(msg));
-			msg.led_state = true;
-			retval = write(msgsockfd_server,  &msg, STRUCT_SIZE);
-		}
-		//Closing opened sockets
-		close(sockfd);
-		close(msgsockfd_server);
+	else{
+	  child_process();
 	}
 	
-      	unlink(PATH);
-	exit(0);
-  }
-
+	
+	unlink(SOCKET_PATH);
+	return 0;
+}
